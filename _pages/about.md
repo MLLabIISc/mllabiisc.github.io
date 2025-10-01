@@ -2,15 +2,15 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.csa.iisc.ac.in/'>CSA.</a> <a href='https://www.iisc.ac.in/'>IISc.</a>
+subtitle: <a href='https://www.csa.iisc.ac.in/'>Department of Computer Science and Automation,</a> <a href='https://www.iisc.ac.in/'>Indian Institute of Science,</a> <a href='https://en.wikipedia.org/wiki/Bengaluru'>Bangalore.</a>
 
 profile:
-  align: center
-  image: prof_pic.jpg
+  align: right
+  image: 
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>251, CSA</p>
-    <p>IISc Bangalore</p>
+  more_info: # >
+    # <p>251, CSA</p>
+    # <p>IISc Bangalore</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -30,4 +30,4 @@ The Machine Learning Lab of the Department of Computer Science and Automation at
 
 To this end, we develop numerous machine learning algorithms and tools for complex real world applications. We want to be able to build AI enabled systems that solve problems for social good. We are actively pursuing applications in the area of computational biology, object detection in images, video segmentation and summarization, detection of rare topics in text documents, statistical modeling of computer systems.
 
-We are located in Bangalore which is the [silicon valley of India](https://en.wikipedia.org/wiki/Bengaluru). We are also collaborating with industries as well as other universities for cutting edge research.
+We are located in Bangalore which is the silicon valley of India. We are also collaborating with industries as well as other universities for cutting edge research.
