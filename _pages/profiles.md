@@ -59,7 +59,7 @@ nav_order: 3
   <ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3">
     {% assign key = l[0] %}
     {% for a in site.data.people[key] %}
-      <li class="col">{% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}, {{ a.year }}</li>
+      <li class="col">{% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}{% if a.year %}, {{ a.year }}{% endif %}</li>
     {% endfor %}
   </ul>
 {% endfor %}

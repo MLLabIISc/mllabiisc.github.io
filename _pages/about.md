@@ -39,7 +39,7 @@ We are unable to respond to part-time, short-term (less than one year) and/or re
 #### Our collaborators
 
 <div class="row align-items-center justify-content-center text-center mt-3 mb-3">
-  {% assign collaborators = "msrlogo.gif:Microsoft Research,linkedin.png:LinkedIn,microsoft.png:Microsoft,tatamotors.png:Tata Motors,atimotors.png:Ati Motors" | split: "," %}
+  {% assign collaborators = "msrlogo.gif:Microsoft Research,amd.svg:AMD" | split: "," %}
   {% for c in collaborators %}
     {% assign parts = c | split: ":" %}
     <div class="col-4 col-md mb-3">

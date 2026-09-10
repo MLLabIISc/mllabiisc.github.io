@@ -25,9 +25,6 @@ phd:
     details:
       - M.Tech, Computer Science and Engineering, IIT Kharagpur
       - Worked in Yahoo and American Express Labs
-  - name: Chaitanya Murti
-    role: PhD student (Robert Bosch Centre for Cyber Physical Systems)
-    email: mchaitanya@iisc.ac.in
   - name: Prateek Kumar Sinha
     photo: prateek_kumar_sinha.jpg
     role: PhD student, started Aug 2022
@@ -92,11 +89,6 @@ mtech:
     email: mayajeets@iisc.ac.in
 
 project_associates:
-  - name: Dhruva Kashyap
-    role: Project Associate
-    email: kdhruva@iisc.ac.in
-    details:
-      - M.Tech CSA, IISc Bengaluru
   - name: Pranav K Nayak
     role: Project Associate
     email: pranavk@iisc.ac.in
@@ -104,6 +96,8 @@ project_associates:
       - B.Tech CSE, IIT Hyderabad
 
 alumni_phd:
+  - name: Chaitanya Murti
+    role: Research Scientist at HP AI Research
   - name: Achintya Kundu
     url: https://achikundu.github.io/
     role: Principal Scientist, HP AI Lab
@@ -231,5 +225,6 @@ alumni_masters:
   - { name: ShivaramaKrishnan K. R., year: 2004 }
 
 alumni_project_associates:
+  - { name: Dhruva Kashyap }
   - { name: Sarmistha Dutta, year: 2015 }
   - { name: Trapit Bansal, year: 2013 }

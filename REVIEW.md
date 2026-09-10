@@ -19,7 +19,7 @@ Sources: the live old site, scraped on 2026-09-10 (treated as the source of trut
 - [ ] Profile image is the old carousel's lab photo (`assets/img/gallery/labpic.jpg`). Check it works as the main image.
 - [ ] Address block is Room 251, CSA, IISc, plus a Maps link, from the old footer.
 - [ ] Added the old site's mentorship-request disclaimer and a link to /opportunities/.
-- [ ] Collaborators strip: MSR, LinkedIn, Microsoft, Tata Motors, Ati Motors. MSR and Microsoft both appear because the old site had both. Is the list still current?
+- [x] Collaborators strip: Microsoft Research and AMD only, as you asked. LinkedIn, Microsoft, Tata Motors and Ati Motors were removed along with their logo files. The AMD logo is the official SVG from Wikimedia Commons (`assets/img/logos/amd.svg`).
 
 ## News (`_news/`, 32 items)
 - [ ] **Items from HTML comments.** The 2021–2022 items were commented out on the old homepage, so they weren't visible there: NeurIPS'22, ICSR'21 award, ICML'21, XraySetu launch, ICRA'21, AIES'21, AAAI'21 (DSLR). I included them. Delete any you had hidden on purpose.
@@ -44,6 +44,7 @@ Sources: the live old site, scraped on 2026-09-10 (treated as the source of trut
 - [ ] **"Priya Sarkaer" → "Priya Sarkar".** Her email `priyasarkar@` supports this.
 - [ ] **Khushi's email:** the old page showed `khushimehta@iisc.ac.in` but its mailto pointed to `khushimetha@`. I used `khushimehta@` to match the surname Mehta. Please verify.
 - [ ] **"Sahoo Mayajeet Satyaranjan Ranjan"** looks like a doubled "Ranjan". I left it unchanged.
+- [x] **Your changes:** Chaitanya Murti moved to Alumni (PhD) as "Research Scientist at HP AI Research" (no photo, placeholder shown). Dhruva Kashyap moved to Alumni (Project Associates). ⚠️ I don't know Dhruva's joining year, so it's left blank; the list now omits ", year" when none is given. Tell me the year to add it.
 - [ ] **Possibly graduated:** check the M.Tech, M.Tech (Research) and project associate lists against who is still in the lab. Also check the PhD list (e.g. Nabanita, started 2018; Mariamma, started 2019). I did not move anyone to alumni.
 - [ ] **Photos:** Achintya Kundu's photo couldn't be downloaded from the old site, so he shows the placeholder. So do everyone the old site gave the generic `bio-photo.jpg`.
 - [ ] Minor normalisation: "Bhubaneshwar" → "Bhubaneswar"; "Linkedin" → "LinkedIn"; LinkedIn URLs stripped of `?originalSubdomain=in`; "Anjali Jain Masters, 2014" → "Anjali Jain, 2014"; Shikhar's role no longer links to Carolyn Rose.
@@ -63,21 +64,22 @@ Sources: the live old site, scraped on 2026-09-10 (treated as the source of trut
 - [ ] **Links from the old site** added as `pdf`/`supp`/`code`/`website`/`video`: ICML'21 Finding k (pdf and supp), NeurIPS'22 When to Intervene (pdf and supp), AIES'21 Rawlsian (pdf), ICML'20 Near-optimal (supp), AAAI'21 DSLR (code and website), ICRA'21 social robots (website and video). The PDFs were copied into `assets/pdf/`, and the old `supp.pdf` was renamed to `final_icml21_lkp_supp.pdf`.
 - [ ] **Selected (homepage):** exactly the 5 most recent peer-reviewed papers: NCDF (ICML'26), Steering (NeurIPS'25), ModHiFi (NeurIPS'25), CheXwhatsApp (CVPR'25), LevAttention (ICLR'25). Two 2025 arXiv preprints (DO-EM; "When Routers, Switches and Interconnects Compute") are newer by date but were left out because they're preprints. Swap them in if you prefer.
 - [ ] **Papers not in DBLP:** every paper on the old site's publication list is now in the bib. The old list was the only non-DBLP source available. Google Scholar (`SbYoEmQAAAAJ`) can't be scraped, so older non-DBLP work (e.g. book chapters, bio/medical journals) may still be missing. Compare against Chiranjib's Scholar/CV if you need full coverage.
-- [ ] Your `max_author_limit` change (show all authors) is kept. `scholar.last_name` still highlights only Bhattacharyya.
+- [ ] Your `max_author_limit` change (show all authors) is kept.
+- [x] Chiranjib Bhattacharyya's name is no longer underlined in publications (removed the `border-bottom` on `.author > em` in `_sass/_base.scss`). The name is still matched by `scholar.last_name`, but it now looks the same as the other authors.
+- [x] ModHiFi now shows a **Spotlight** award badge (al-folio `award_name`/`award` fields). Clicking it shows "Published as a Spotlight in NeurIPS 2025." The badge also appears in the homepage's selected papers.
 
 ## Projects (`_projects/`, 8 pages; collection re-enabled)
-- [ ] Order (`importance`): COVID-SWIFT/XraySetu, COVID-19 projects, social robotics, DSLR, LiDAR SLAM, cognitive impairment, community detection, program synthesis.
-- [ ] **No card image** for COVID-SWIFT, COVID-19 and DSLR, because the old site had none or a broken image. Add images if you have them.
-- [ ] Descriptions were copied with light grammar edits. "Center for Brain Research" → "Centre for Brain Research". I added an Ati Motors link that wasn't on the old site.
-- [ ] Team credits (Rishabh Gupta, Dhiraj D. Shanbhag, Prashant Kumar, …) are from the old site. Are these projects still active, or should some be marked as past?
-- [ ] Unused old project images (DomePub, Fano, SmartPub) were not copied over.
+- [x] **The text is now word for word from the old site** (you asked for this). The 7 projects are copied from mllab.csa.iisc.ac.in/projects and the COVID-19 page from /csacovid19. The original paragraphs, author lines (e.g. "-Mariamma") and "Read more…" links are copied as is, and commented-out markup is dropped. I added no text and no card descriptions. Inline colours and styles on the COVID-19 page were removed; the words are unchanged. An automated check confirmed every sentence on the new pages appears verbatim on the old pages.
+- [ ] Because the text is verbatim, the old site's typos are kept, e.g. "impairement", "Alzheimers", "Center for Brain Research", "Has the concept the Autonomous vehicles…", "Ati motors", "Xraysetu", and the unfinished sentence "…study their effectiveness in / Suppressing COVID19…". Tell me if you want any of them fixed.
+- [ ] The COVID-SWIFT links still point to `https://mllab.csa.iisc.ac.in/covid-swift/`, the old microsite. That page will disappear when this site replaces the old one.
+- [ ] Order (`importance`): COVID-SWIFT, COVID-19 projects, social robotics, DSLR, LiDAR SLAM, cognitive impairment, community detection, program synthesis.
+- [ ] No card image for COVID-SWIFT, COVID-19 and DSLR, because the old site had none.
 
 ## Awards & Press (`_pages/awards.md`)
 - [ ] Copied the 8 awards and 3 press items. "Karthik Kumara" is kept as on the old site; it may be "Karthik Kumar", as listed in alumni.
 
 ## Opportunities (`_pages/opportunities.md`)
-- [ ] ⚠️ **The banner says "There are no open positions at the moment."** The old postings closed in Dec 2023, so they're kept below the banner, rewritten in past tense, for reference. Replace with current openings or delete the old ones.
-- [ ] Spelling: "Govindrajan" → "Govindarajan"; "muprof and vtune" → "µProf and VTune".
+- [x] All old postings were removed, as you asked. The page now shows only the old site's own wording: "No positions open currently." plus the mentorship-request note from the old homepage.
 
 ## Gallery (`_pages/gallery.md`)
 - [ ] 2 YouTube talks (Amazon AI Conclave 2018, NASSCOM 2016) plus the old homepage's carousel photos and the one informal photo.
