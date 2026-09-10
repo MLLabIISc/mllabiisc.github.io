@@ -40,7 +40,7 @@ related_publications: false
 <p>A slide deck detailing the tool is available <a href="https://drive.google.com/open?id=1G6fbV0fzH9Xo9_y2zdZqnmEQRgpoJ8bc">here</a>.</p>
 <p><br /></p>
 <hr>
-<h2> Project 3: COVID-SWIFT (Now known as <a href="https://www.xraysetu.com/", target="_blank">Xray-Setu</a>)</h2>
+<h2> Project 3: COVID-SWIFT (Now known as <a href="https://www.xraysetu.com/" target="_blank">Xray-Setu</a>)</h2>
 <hr>
 <h5><b>Lead Developers:</b> Sabyasachi Sahoo (IISc), Rachit Shah (IISc), Siva Teja Kakileti (Niramai), Prateek Katte(Niramai)</h5>
 <h5><b>Contact (left to right):</b> sabyasachis@iisc.ac.in, rshah240@gmail.com, sivateja@niramai.com, pratik.katte@niramai.com</h5>
