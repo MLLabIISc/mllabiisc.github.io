@@ -161,44 +161,44 @@ ninja.data = [{
           section: "News",},{id: "news-paper-blending-neural-control-density-functions-for-stabilization-and-safety-by-sahil-chaudhary-chaitanya-murti-and-chiranjib-bhattacharyya-published-in-icml-2026",
           title: 'Paper Blending Neural Control Density Functions for Stabilization and Safety by Sahil Chaudhary,...',
           description: "",
-          section: "News",},{id: "projects-covid-swift-xraysetu",
-          title: 'COVID-SWIFT / XraySetu',
-          description: "WhatsApp-based AI diagnosis of COVID-19 and 14 other lung abnormalities from chest X-rays.",
+          section: "News",},{id: "projects-covid-swift-now-known-as-xray-setu",
+          title: 'COVID-SWIFT (Now known as Xray-Setu)',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_covid-swift/";
-            },},{id: "projects-covid-19-projects-from-csa",
-          title: 'COVID-19 projects from CSA',
-          description: "Lockdown policy modelling, CovidWATCH, and COVID-SWIFT.",
+            },},{id: "projects-covid-19-projects-from-csa-iisc",
+          title: 'COVID-19 PROJECTS FROM CSA, IISC',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_covid19/";
-            },},{id: "projects-social-robotics-for-special-education",
-          title: 'Social robotics for special education',
-          description: "Teaching assistance through social robotics for children with autism.",
+            },},{id: "projects-teaching-assistance-through-social-robotics-for-children-with-autism",
+          title: 'Teaching assistance through social robotics for children with autism',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_social-robotics/";
-            },},{id: "projects-dslr",
-          title: 'DSLR',
-          description: "Dynamic to Static LiDAR Scan Reconstruction using an adversarially trained autoencoder (AAAI 2021).",
+            },},{id: "projects-dslr-dynamic-to-static-lidar-scan-reconstruction-using-adversarially-trained-autoencoder",
+          title: 'DSLR : Dynamic to Static LiDAR Scan Reconstruction Using Adversarially Trained Autoencoder',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_dslr/";
             },},{id: "projects-slam-on-lidar-based-autonomous-vehicles",
-          title: 'SLAM on LiDAR-based autonomous vehicles',
-          description: "Simultaneous localization and mapping and occlusion handling, with Ati Motors.",
+          title: 'SLAM on LiDAR based autonomous vehicles',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_lidar-slam/";
-            },},{id: "projects-predicting-cognitive-impairment",
-          title: 'Predicting cognitive impairment',
-          description: "ML-based prediction of cognitive impairment from brain interactions, with the Centre for Brain Research.",
+            },},{id: "projects-ml-based-prediction-of-cognitive-impairement-by-understanding-brain-interactions-in-collaboration-with-center-for-brain-research",
+          title: 'ML based prediction of cognitive impairement by understanding brain interactions in collaboration with...',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_cognitive-impairment/";
             },},{id: "projects-overlapping-community-detection",
-          title: 'Overlapping community detection',
-          description: "Detecting overlapping communities in massive networks with provable error bounds.",
+          title: 'Overlapping Community Detection',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_community-detection/";
             },},{id: "projects-program-synthesis-meets-machine-learning",
-          title: 'Program synthesis meets machine learning',
-          description: "Exploring the usefulness of machine learning in synthesizing programs from specifications.",
+          title: 'Program Synthesis meets Machine Learning',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_program-synthesis/";
             },},{
