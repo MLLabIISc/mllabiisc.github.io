@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://mllabiisc.github.io/sitemap.xml
+Sitemap: https://mllab.csa.iisc.ac.in/sitemap.xml

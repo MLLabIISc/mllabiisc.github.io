@@ -23,424 +23,184 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
-          },
         },{id: "nav-people",
           title: "people",
-          description: "members of the lab or group",
+          description: "members and alumni of the Machine Learning Lab",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "post-a-post-with-plotly-js",
-        
-          title: "a post with plotly.js",
-        
-        description: "this is what included plotly.js code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/plotly/";
-          
-        },
-      },{id: "post-a-post-with-image-galleries",
-        
-          title: "a post with image galleries",
-        
-        description: "this is what included image galleries could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/photo-gallery/";
-          
-        },
-      },{id: "post-a-post-with-tabs",
-        
-          title: "a post with tabs",
-        
-        description: "this is what included tabs in a post could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/tabs/";
-          
-        },
-      },{id: "post-a-post-with-typograms",
-        
-          title: "a post with typograms",
-        
-        description: "this is what included typograms code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/typograms/";
-          
-        },
-      },{id: "post-a-post-that-can-be-cited",
-        
-          title: "a post that can be cited",
-        
-        description: "this is what a post that can be cited looks like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/post-citation/";
-          
-        },
-      },{id: "post-a-post-with-pseudo-code",
-        
-          title: "a post with pseudo code",
-        
-        description: "this is what included pseudo code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/pseudocode/";
-          
-        },
-      },{id: "post-a-post-with-code-diff",
-        
-          title: "a post with code diff",
-        
-        description: "this is how you can display code diffs",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/code-diff/";
-          
-        },
-      },{id: "post-a-post-with-advanced-image-components",
-        
-          title: "a post with advanced image components",
-        
-        description: "this is what advanced image components could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/advanced-images/";
-          
-        },
-      },{id: "post-a-post-with-vega-lite",
-        
-          title: "a post with vega lite",
-        
-        description: "this is what included vega lite code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/vega-lite/";
-          
-        },
-      },{id: "post-a-post-with-geojson",
-        
-          title: "a post with geojson",
-        
-        description: "this is what included geojson code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/geojson-map/";
-          
-        },
-      },{id: "post-a-post-with-echarts",
-        
-          title: "a post with echarts",
-        
-        description: "this is what included echarts code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/echarts/";
-          
-        },
-      },{id: "post-a-post-with-chart-js",
-        
-          title: "a post with chart.js",
-        
-        description: "this is what included chart.js code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/chartjs/";
-          
-        },
-      },{id: "post-a-post-with-tikzjax",
-        
-          title: "a post with TikZJax",
-        
-        description: "this is what included TikZ code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/tikzjax/";
-          
-        },
-      },{id: "post-a-post-with-bibliography",
-        
-          title: "a post with bibliography",
-        
-        description: "an example of a blog post with bibliography",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/post-bibliography/";
-          
-        },
-      },{id: "post-a-post-with-jupyter-notebook",
-        
-          title: "a post with jupyter notebook",
-        
-        description: "an example of a blog post with jupyter notebook",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/jupyter-notebook/";
-          
-        },
-      },{id: "post-a-post-with-custom-blockquotes",
-        
-          title: "a post with custom blockquotes",
-        
-        description: "an example of a blog post with custom blockquotes",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/custom-blockquotes/";
-          
-        },
-      },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
-        
-          title: "a post with table of contents on a sidebar",
-        
-        description: "an example of a blog post with table of contents on a sidebar",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/sidebar-table-of-contents/";
-          
-        },
-      },{id: "post-a-post-with-audios",
-        
-          title: "a post with audios",
-        
-        description: "this is what included audios could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/audios/";
-          
-        },
-      },{id: "post-a-post-with-videos",
-        
-          title: "a post with videos",
-        
-        description: "this is what included videos could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/videos/";
-          
-        },
-      },{id: "post-displaying-beautiful-tables-with-bootstrap-tables",
-        
-          title: "displaying beautiful tables with Bootstrap Tables",
-        
-        description: "an example of how to use Bootstrap Tables",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/tables/";
-          
-        },
-      },{id: "post-a-post-with-table-of-contents",
-        
-          title: "a post with table of contents",
-        
-        description: "an example of a blog post with table of contents",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/table-of-contents/";
-          
-        },
-      },{id: "post-a-post-with-giscus-comments",
-        
-          title: "a post with giscus comments",
-        
-        description: "an example of a blog post with giscus comments",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2022/giscus-comments/";
-          
-        },
-      },{id: "post-a-post-with-redirect",
-        
-          title: "a post with redirect",
-        
-        description: "you can also redirect to assets like pdf",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/assets/pdf/example_pdf.pdf";
-          
-        },
-      },{id: "post-a-post-with-diagrams",
-        
-          title: "a post with diagrams",
-        
-        description: "an example of a blog post with diagrams",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2021/diagrams/";
-          
-        },
-      },{id: "post-a-distill-style-blog-post",
-        
-          title: "a distill-style blog post",
-        
-        description: "an example of a distill-style blog post and main elements",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2021/distill/";
-          
-        },
-      },{id: "post-a-post-with-twitter",
-        
-          title: "a post with twitter",
-        
-        description: "an example of a blog post with twitter",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2020/twitter/";
-          
-        },
-      },{id: "post-a-post-with-disqus-comments",
-        
-          title: "a post with disqus comments",
-        
-        description: "an example of a blog post with disqus comments",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/disqus-comments/";
-          
-        },
-      },{id: "post-a-post-with-math",
-        
-          title: "a post with math",
-        
-        description: "an example of a blog post with some math",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/math/";
-          
-        },
-      },{id: "post-a-post-with-code",
-        
-          title: "a post with code",
-        
-        description: "an example of a blog post with some code",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/code/";
-          
-        },
-      },{id: "post-a-post-with-images",
-        
-          title: "a post with images",
-        
-        description: "this is what included images could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/images/";
-          
-        },
-      },{id: "post-a-post-with-formatting-and-links",
-        
-          title: "a post with formatting and links",
-        
-        description: "march &amp; april, looking forward to summer",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/formatting-and-links/";
-          
-        },
-      },{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+        },{id: "nav-projects",
+          title: "projects",
+          description: "Research and applied projects from the lab.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-news",
+          title: "news",
+          description: "News from the Machine Learning Lab.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/news/";
+          },
+        },{id: "nav-awards-amp-press",
+          title: "awards &amp; press",
+          description: "Awards received by lab members and press coverage of our work.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/awards/";
+          },
+        },{id: "nav-opportunities",
+          title: "opportunities",
+          description: "Open positions in the Machine Learning Lab.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/opportunities/";
+          },
+        },{id: "nav-gallery",
+          title: "gallery",
+          description: "Talks, events, and moments from the lab.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/gallery/";
+          },
+        },{id: "news-prof-chiranjib-bhattacharyya-co-chairs-a-special-task-group-on-machine-intelligence-set-up-by-the-karnataka-knowledge-commission",
+          title: 'Prof. Chiranjib Bhattacharyya co-chairs a special task group on machine intelligence set up...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-paper-using-inherent-structures-to-design-lean-2-layer-rbms-by-abhishek-bansal-ibm-india-abhinav-anand-iisc-and-chiranjib-bhattacharyya-iisc-has-been-accepted-at-icml-2018",
+          title: 'Paper Using Inherent Structures to design Lean 2-layer RBMs by Abhishek Bansal (IBM...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-abhishek-bansal-received-the-computer-society-of-india-bangalore-medal-for-best-m-tech-student-2017-he-was-advised-by-prof-chiranjib-bhattacharyya",
+          title: 'Abhishek Bansal received the Computer Society of India Bangalore Medal for Best M.Tech...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "news-shikhar-vashishth-advised-by-prof-partha-talukdar-and-prof-chiranjib-bhattacharyya-is-awarded-the-google-phd-fellowship",
+          title: 'Shikhar Vashishth, advised by Prof. Partha Talukdar and Prof. Chiranjib Bhattacharyya, is awarded...',
+          description: "",
+          section: "News",},{id: "news-joint-workshop-by-iisc-microsoft-research-and-u-pennsylvania-on-programming-languages-formal-methods-and-cyber-physical-systems-jan-10th-2019-in-the-department-of-csa",
+          title: 'Joint workshop by IISc, Microsoft Research, and U. Pennsylvania on Programming Languages, Formal...',
+          description: "",
+          section: "News",},{id: "news-prof-chiranjib-bhattacharyya-is-collaborating-with-tata-motors-in-the-domain-of-artificial-intelligence-and-computer-vision",
+          title: 'Prof. Chiranjib Bhattacharyya is collaborating with Tata Motors in the domain of artificial...',
+          description: "",
+          section: "News",},{id: "news-pooja-ravi-kulkarni-is-selected-for-the-computer-society-of-india-bangalore-medal-for-best-m-tech-student-2018-she-was-advised-by-prof-chiranjib-bhattacharyya",
+          title: 'Pooja Ravi Kulkarni is selected for the Computer Society of India Bangalore Medal...',
+          description: "",
+          section: "News",},{id: "news-prof-chiranjib-bhattacharyya-is-organising-deep-tech-entrepreneurship-an-ongoing-effort-to-bring-together-alumni-faculty-and-students-of-iisc-with-the-broader-entrepreneurial-ecosystem-of-deep-technology-companies",
+          title: 'Prof. Chiranjib Bhattacharyya is organising Deep Tech Entrepreneurship, an ongoing effort to bring...',
+          description: "",
+          section: "News",},{id: "news-paper-finding-a-latent-k-simplex-in-o-k-nnz-data-time-via-subset-smoothing-by-chiranjib-bhattacharyya-and-ravindran-kannan-published-in-soda-2020",
+          title: 'Paper Finding a latent k-simplex in O*(k·nnz(data)) time via Subset Smoothing by Chiranjib...',
+          description: "",
+          section: "News",},{id: "news-prof-chiranjib-bhattacharyya-is-organising-the-fate-ml-workshop-on-fairness-accountability-transparency-and-ethics-in-machine-learning-in-collaboration-with-iisc-linkedin-and-microsoft-research",
+          title: 'Prof. Chiranjib Bhattacharyya is organising the FATE ML workshop on Fairness, Accountability, Transparency...',
+          description: "",
+          section: "News",},{id: "news-paper-near-optimal-sample-complexity-bounds-for-learning-latent-k-polytopes-and-applications-to-ad-mixtures-by-chiranjib-bhattacharyya-and-ravindran-kannan-published-in-icml-2020",
+          title: 'Paper Near-optimal sample complexity bounds for learning Latent k-polytopes and applications to Ad-Mixtures...',
+          description: "",
+          section: "News",},{id: "news-paper-learning-with-subquadratic-regularization-a-primal-dual-approach-by-raman-sankaran-francis-bach-and-chiranjib-bhattacharyya-published-in-ijcai-2020",
+          title: 'Paper Learning With Subquadratic Regularization: A Primal-Dual Approach by Raman Sankaran, Francis Bach,...',
+          description: "",
+          section: "News",},{id: "news-prof-chiranjib-bhattacharyya-takes-charge-as-the-chair-of-the-csa-department",
+          title: 'Prof. Chiranjib Bhattacharyya takes charge as the Chair of the CSA Department.',
+          description: "",
+          section: "News",},{id: "news-paper-dslr-dynamic-to-static-lidar-scan-reconstruction-using-adversarially-trained-autoencoder-by-p-kumar-s-sahoo-v-shah-v-kondameedi-a-jain-a-verma-c-bhattacharyya-iisc-and-v-vinay-amidc-cmi-published-in-aaai-2021",
+          title: 'Paper DSLR: Dynamic to Static LiDAR Scan Reconstruction Using Adversarially Trained Autoencoder by...',
+          description: "",
+          section: "News",},{id: "news-paper-rawlsian-fair-adaptation-of-deep-learning-classifiers-by-pooja-gupta-iisc-chiranjib-bhattacharyya-iisc-kulin-shah-msr-india-and-amit-deshpande-msr-india-published-in-aies-2021",
+          title: 'Paper Rawlsian Fair Adaptation of Deep Learning Classifiers by Pooja Gupta (IISc), Chiranjib...',
+          description: "",
+          section: "News",},{id: "news-paper-can-non-humanoid-social-robots-reduce-workload-of-special-educators-an-online-and-in-premises-field-study-by-nabanita-paul-iisc-siddharth-ramesh-iisc-chiranjib-bhattacharyya-iisc-jayashree-ramesh-asha-and-priya-vijayan-asha-published-in-icra-2021",
+          title: 'Paper Can Non-Humanoid Social Robots Reduce Workload of Special Educators: An Online and...',
+          description: "",
+          section: "News",},{id: "news-covid-swift-developed-by-the-ml-lab-and-niramai-is-now-launched-as-xraysetu",
+          title: 'COVID-SWIFT, developed by the ML Lab and Niramai, is now launched as XraySetu....',
+          description: "",
+          section: "News",},{id: "news-paper-finding-k-in-latent-k-polytope-by-chiranjib-bhattacharyya-iisc-ravindran-kannan-msr-and-amit-kumar-iit-delhi-published-in-icml-2021",
+          title: 'Paper Finding k in Latent k-Polytope by Chiranjib Bhattacharyya (IISc), Ravindran Kannan (MSR),...',
+          description: "",
+          section: "News",},{id: "news-winner-in-the-icsr-2021-robot-design-competition-in-the-category-of-innovation-in-software-award-for-the-submission-can-non-humanoid-social-robots-reduce-workload-of-special-educators-by-nabanita-paul-iisc-and-chiranjib-bhattacharyya-iisc",
+          title: 'Winner in the ICSR 2021 Robot Design Competition in the category of Innovation...',
+          description: "",
+          section: "News",},{id: "news-paper-when-to-intervene-learning-optimal-intervention-policies-for-critical-events-by-niranjan-damera-venkata-hp-and-chiranjib-bhattacharyya-iisc-published-in-neurips-2022",
+          title: 'Paper When to Intervene: Learning Optimal Intervention Policies for Critical Events by Niranjan...',
+          description: "",
+          section: "News",},{id: "news-paper-dfpc-data-flow-driven-pruning-of-coupled-channels-without-data-by-tanay-narshana-observe-ai-chaitanya-murti-iisc-and-chiranjib-bhattacharyya-iisc-published-in-iclr-2023",
+          title: 'Paper DFPC - Data Flow Driven Pruning of Coupled Channels without Data by...',
+          description: "",
+          section: "News",},{id: "news-paper-tvsprune-pruning-nondiscriminative-filters-via-total-variation-separability-of-intermediate-filters-without-fine-tuning-by-chaitanya-murti-iisc-tanay-narshana-observe-ai-and-chiranjib-bhattacharyya-iisc-published-in-iclr-2023",
+          title: 'Paper TVSPrune - Pruning Nondiscriminative Filters via Total Variation Separability of Intermediate Filters...',
+          description: "",
+          section: "News",},{id: "news-paper-discussing-technical-challenges-in-diagnosing-chest-x-rays-through-mobile-phones-such-as-those-launched-in-xraysetu-is-now-available-in-nature-scientific-reports",
+          title: 'Paper discussing technical challenges in diagnosing chest X-rays through mobile phones, such as...',
+          description: "",
+          section: "News",},{id: "news-paper-lp-based-construction-of-dc-decompositions-for-efficient-inference-of-markov-random-fields-by-chaitanya-murti-dhruva-kashyap-and-chiranjib-bhattacharyya-published-in-aistats-2024",
+          title: 'Paper LP-based Construction of DC Decompositions for Efficient Inference of Markov Random Fields...',
+          description: "",
+          section: "News",},{id: "news-paper-random-separating-hyperplane-theorem-and-learning-polytopes-by-chiranjib-bhattacharyya-iisc-ravindran-kannan-cmu-and-amit-kumar-iit-delhi-published-in-icalp-2024",
+          title: 'Paper Random Separating Hyperplane Theorem and Learning Polytopes by Chiranjib Bhattacharyya (IISc), Ravindran...',
+          description: "",
+          section: "News",},{id: "news-paper-decision-time-illuminating-performance-in-india-s-district-courts-by-varsha-aithala-nlsiu-anushka-sachan-nlsiu-srijoni-sen-nlsiu-himanshu-payal-iisc-and-chiranjib-bhattacharyya-iisc-published-in-cambridge-data-amp-amp-policy-vol-6",
+          title: 'Paper Decision time: illuminating performance in India’s district courts by Varsha Aithala (NLSIU),...',
+          description: "",
+          section: "News",},{id: "news-paper-discedit-model-editing-by-identifying-discriminative-components-by-chaitanya-murti-and-chiranjib-bhattacharyya-published-in-neurips-2024",
+          title: 'Paper DisCEdit: Model Editing by Identifying Discriminative Components by Chaitanya Murti and Chiranjib...',
+          description: "",
+          section: "News",},{id: "news-paper-predicting-ground-state-properties-constant-sample-complexity-and-deep-learning-algorithms-by-marc-wanner-chalmers-laura-lewis-cambridge-chiranjib-bhattacharyya-iisc-devdatt-dubhashi-chalmers-and-alexandru-gheorghiu-chalmers-published-in-neurips-2024",
+          title: 'Paper Predicting Ground State Properties: Constant Sample Complexity and Deep Learning Algorithms by...',
+          description: "",
+          section: "News",},{id: "news-paper-chexwhatsapp-a-dataset-for-exploring-challenges-in-the-diagnosis-of-chest-x-rays-through-mobile-devices-by-mariamma-antony-rajiv-porana-sahil-m-lathiya-siva-teja-kakileti-and-chiranjib-bhattacharyya-published-in-cvpr-2025",
+          title: 'Paper CheXwhatsApp: A Dataset for Exploring Challenges in the Diagnosis of Chest X-rays...',
+          description: "",
+          section: "News",},{id: "news-paper-modhifi-identifying-high-fidelity-predictive-components-for-model-modification-by-dhruva-kashyap-chaitanya-murti-pranav-k-nayak-tanay-narshana-and-chiranjib-bhattacharyya-published-as-a-spotlight-in-neurips-2025",
+          title: 'Paper ModHiFi: Identifying High Fidelity Predictive Components for Model Modification by Dhruva Kashyap,...',
+          description: "",
+          section: "News",},{id: "news-paper-on-optimal-steering-to-achieve-exact-fairness-by-mohit-sharma-amit-deshpande-chiranjib-bhattacharyya-and-rajiv-ratn-shah-published-in-neurips-2025",
+          title: 'Paper On Optimal Steering to Achieve Exact Fairness by Mohit Sharma, Amit Deshpande,...',
+          description: "",
+          section: "News",},{id: "news-paper-blending-neural-control-density-functions-for-stabilization-and-safety-by-sahil-chaudhary-chaitanya-murti-and-chiranjib-bhattacharyya-published-in-icml-2026",
+          title: 'Paper Blending Neural Control Density Functions for Stabilization and Safety by Sahil Chaudhary,...',
+          description: "",
+          section: "News",},{id: "projects-covid-swift-xraysetu",
+          title: 'COVID-SWIFT / XraySetu',
+          description: "WhatsApp-based AI diagnosis of COVID-19 and 14 other lung abnormalities from chest X-rays.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+              window.location.href = "/projects/1_covid-swift/";
+            },},{id: "projects-covid-19-projects-from-csa",
+          title: 'COVID-19 projects from CSA',
+          description: "Lockdown policy modelling, CovidWATCH, and COVID-SWIFT.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+              window.location.href = "/projects/2_covid19/";
+            },},{id: "projects-social-robotics-for-special-education",
+          title: 'Social robotics for special education',
+          description: "Teaching assistance through social robotics for children with autism.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+              window.location.href = "/projects/3_social-robotics/";
+            },},{id: "projects-dslr",
+          title: 'DSLR',
+          description: "Dynamic to Static LiDAR Scan Reconstruction using an adversarially trained autoencoder (AAAI 2021).",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+              window.location.href = "/projects/4_dslr/";
+            },},{id: "projects-slam-on-lidar-based-autonomous-vehicles",
+          title: 'SLAM on LiDAR-based autonomous vehicles',
+          description: "Simultaneous localization and mapping and occlusion handling, with Ati Motors.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+              window.location.href = "/projects/5_lidar-slam/";
+            },},{id: "projects-predicting-cognitive-impairment",
+          title: 'Predicting cognitive impairment',
+          description: "ML-based prediction of cognitive impairment from brain interactions, with the Centre for Brain Research.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+              window.location.href = "/projects/6_cognitive-impairment/";
+            },},{id: "projects-overlapping-community-detection",
+          title: 'Overlapping community detection',
+          description: "Detecting overlapping communities in massive networks with provable error bounds.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
+              window.location.href = "/projects/7_community-detection/";
+            },},{id: "projects-program-synthesis-meets-machine-learning",
+          title: 'Program synthesis meets machine learning',
+          description: "Exploring the usefulness of machine learning in synthesizing programs from specifications.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
+              window.location.href = "/projects/8_program-synthesis/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
