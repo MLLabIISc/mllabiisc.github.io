@@ -1,0 +1,235 @@
+# Lab members, rendered by _pages/profiles.md.
+# Photos live in assets/img/people/; leave `photo` empty to use the placeholder.
+
+faculty:
+  - name: Prof. Chiranjib Bhattacharyya
+    photo: chiru2.png
+    url: https://www.csa.iisc.ac.in/~chiru/
+    role: Professor, CSA, Indian Institute of Science, Bangalore
+    email: chiru@iisc.ac.in
+
+phd:
+  - name: Nabanita Paul
+    photo: nabanita.jpg
+    url: https://nabanita-paul.github.io/
+    role: PhD student, started Aug 2018
+    email: nabanitapaul@iisc.ac.in
+    linkedin: https://www.linkedin.com/in/nabanita-paul-70349575
+    details:
+      - Worked in Johnson Controls, Pune, Maharashtra
+      - B.Tech, Computer Science and Engineering, BPPIMT, Kolkata
+  - name: Mariamma Antony
+    photo: mariamma.jpg
+    role: PhD student, started Aug 2019
+    email: mariammaa@iisc.ac.in
+    details:
+      - M.Tech, Computer Science and Engineering, IIT Kharagpur
+      - Worked in Yahoo and American Express Labs
+  - name: Chaitanya Murti
+    role: PhD student (Robert Bosch Centre for Cyber Physical Systems)
+    email: mchaitanya@iisc.ac.in
+  - name: Prateek Kumar Sinha
+    photo: prateek_kumar_sinha.jpg
+    role: PhD student, started Aug 2022
+    email: prateeksinha@iisc.ac.in
+  - name: Sayantan Pramanik
+    photo: sayantan_pramanik.jpeg
+    role: PhD student (Robert Bosch Centre for Cyber Physical Systems)
+    email: sayantanp@iisc.ac.in
+  - name: Adit Vishnu
+    role: PhD student
+    email: aditvishnu@iisc.ac.in
+  - name: Sunny Manchanda
+    role: PhD student (DRDO)
+    email: sunnym@iisc.ac.in
+
+mtech_research:
+  - name: Ravi Raja
+    photo: raviraja.jpg
+    url: https://sites.google.com/view/raviraja/
+    role: M.Tech (Research), shared with Programming Language Lab, started Aug 2019
+    email: raviraja@iisc.ac.in
+    linkedin: https://www.linkedin.com/in/raviraja-iisc/
+    details:
+      - B.E., Computer Science and Engineering, UIET Hoshiarpur, Panjab University
+  - name: Rajiv Porana
+    role: M.Tech (Research)
+    email: rajivporana@iisc.ac.in
+  - name: Viren Luke Radhakrishnan
+    role: M.Tech (Research) (ERP from AMD)
+    email: virenluke@iisc.ac.in
+
+mtech:
+  - name: Anshika Modi
+    role: M.Tech student
+    email: anshikamodi@iisc.ac.in
+  - name: Korlepara Sai Phanindra
+    role: M.Tech student
+    email: phanindrak@iisc.ac.in
+  - name: Deodhar Vritika Ketan Vedanta
+    role: M.Tech student
+    email: vritikad@iisc.ac.in
+  - name: Boppena Nagaraju
+    role: M.Tech student (DRDO)
+    email: nagarajub@iisc.ac.in
+  - name: Kunal Chaudhary
+    role: M.Tech student (DRDO)
+    email: kunalc@iisc.ac.in
+  - name: Mansi Tomer
+    role: M.Tech student (AI)
+    email: mansitomer@iisc.ac.in
+  - name: Mehta Khushi Nirav
+    role: M.Tech student (AI)
+    email: khushimehta@iisc.ac.in
+  - name: Nirbhay Sharma
+    role: M.Tech student (AI)
+    email: nirbhays@iisc.ac.in
+  - name: Priya Sarkar
+    role: M.Tech student (AI)
+    email: priyasarkar@iisc.ac.in
+  - name: Sahoo Mayajeet Satyaranjan Ranjan
+    role: M.Tech student (AI)
+    email: mayajeets@iisc.ac.in
+
+project_associates:
+  - name: Dhruva Kashyap
+    role: Project Associate
+    email: kdhruva@iisc.ac.in
+    details:
+      - M.Tech CSA, IISc Bengaluru
+  - name: Pranav K Nayak
+    role: Project Associate
+    email: pranavk@iisc.ac.in
+    details:
+      - B.Tech CSE, IIT Hyderabad
+
+alumni_phd:
+  - name: Achintya Kundu
+    url: https://achikundu.github.io/
+    role: Principal Scientist, HP AI Lab
+  - name: Shikhar Vashishth
+    photo: shikhar2.jpg
+    url: https://shikhar-vashishth.github.io/
+    role: Postdoctoral Researcher, Language Technologies Institute, Carnegie Mellon University
+    details:
+      - Ph.D. jointly under Partha Pratim Talukdar, Chiranjib Bhattacharyya, and Manaal Faruqui, IISc
+  - name: Lavanya Sita Tekumalla
+    photo: lavanya.png
+    url: https://lavanyats.github.io/
+    role: Founder of MachineLearningInterview.com
+    details:
+      - Industry, over 9 years — Amazon, InMobi, Myntra, Kenome
+  - name: Adway Mitra
+    photo: adway.jpeg
+    url: https://www.linkedin.com/in/adway-mitra-89a5ba1b/
+    role: Assistant Professor, IIT Bhubaneswar
+    details:
+      - Airbus Prize Postdoctoral Fellow, International Centre for Theoretical Sciences
+  - name: Goutham Tholpadi
+    photo: goutham.jpeg
+    url: https://www.linkedin.com/in/gtholpadi/
+    role: Data Science for Datacenters, Peritus.ai
+    details:
+      - Data Science for Advertising, Microsoft Research
+  - name: S Raman
+    photo: raman.jpeg
+    url: https://www.linkedin.com/in/raman-sankaran-9594956/
+    role: Senior Applied Research Scientist, LinkedIn
+    details:
+      - Ph.D. in Machine Learning 2017, Dept. of CSA, IISc
+  - name: Mrinal Kanti Das
+    photo: mrinal.jpg
+    url: https://nmrinl.github.io/
+    role: Assistant Professor, Dept. of CSE, IIT Palakkad
+    details:
+      - Postdoc, Dept. of Computer Science, UMass Amherst
+  - name: Sahely Bhadra
+    photo: sahely.png
+    url: https://iitpkd.ac.in/people/sahely
+    role: Assistant Professor, Dept. of CSE, IIT Palakkad
+    details:
+      - Postdoc, Network Science Institute, Northeastern University
+  - name: Saketh Nath J
+    photo: saketh.jpg
+    url: https://iith.ac.in/~saketha/about.html
+    role: Associate Professor, Dept. of CSE, IIT Hyderabad
+    details:
+      - Associate Professor, Dept. of CSE, IIT Bombay
+  - name: Sourangshu Bhattacharya
+    photo: sourangshu.jpg
+    url: https://cse.iitkgp.ac.in/~sourangshu/
+    role: Assistant Professor, Dept. of CSE, IIT Kharagpur
+    details:
+      - Scientist, Yahoo! Labs, Bangalore
+
+# Year is the joining year.
+alumni_masters_research:
+  - { name: Abhinav Anand, year: 2016 }
+  - { name: Ankit Jauhari, year: 2014, url: "https://linkedin.com/in/aj696" }
+  - { name: Jagdeep Pani, year: 2013 }
+  - { name: Rashmi Balasubramanyam, year: 2013 }
+  - { name: Patel Vishal Nandakishore, year: 2007 }
+  - { name: Vipul Agarwal, year: 2007 }
+  - { name: Yadwadkar Neeraja Jayant, year: 2007 }
+  - { name: Vinay Jethava, year: 2006 }
+
+alumni_masters:
+  - { name: Pooja Ravi Kulkarni, year: 2016, url: "https://www.linkedin.com/in/pooja-kulkarni-32541aa6/" }
+  - { name: Prachi Sharma, year: 2016 }
+  - { name: Vysakh P R, year: 2016, url: "https://www.linkedin.com/in/vysakhpr/" }
+  - { name: Abhishek Bansal, year: 2015 }
+  - { name: Akshay Verma, year: 2015 }
+  - { name: Himanshi Sinha, year: 2015 }
+  - { name: Lakshmi Bansal, year: 2015 }
+  - { name: Pinky Budania, year: 2015 }
+  - { name: Pushkar Nagar, year: 2015 }
+  - { name: Sakina Bohra, year: 2015 }
+  - { name: Sarmistha Dutta, year: 2015 }
+  - { name: Shreyans Dhankhar, year: 2015 }
+  - { name: Sudeep Chatterjee, year: 2015 }
+  - { name: Sweta Sharma, year: 2015 }
+  - { name: Anjali Jain, year: 2014 }
+  - { name: Harit Vishwakarma, year: 2014 }
+  - { name: Lucky Dhakad, year: 2014 }
+  - { name: Shreyas S, year: 2014 }
+  - { name: Bibaswan Kumar Chatterjee, year: 2013 }
+  - { name: Harichand M V, year: 2013 }
+  - { name: Jaiprakash, year: 2013 }
+  - { name: Mohd Aqil, year: 2013 }
+  - { name: Pawan Kumar, year: 2013 }
+  - { name: Pradeep Bansal, year: 2013 }
+  - { name: Purshotam, year: 2013 }
+  - { name: Sayak Ray Chowdhury, year: 2013 }
+  - { name: Bhupendra Singh Solanki, year: 2012 }
+  - { name: Binu Jasim, year: 2012 }
+  - { name: Prashant Bhardwaj, year: 2012 }
+  - { name: Rakesh S, year: 2012 }
+  - { name: Shiv Ganesh S, year: 2012 }
+  - { name: V.V. Srinivas, year: 2012 }
+  - { name: Dyut Kumar Sil, year: 2009 }
+  - { name: Harish Guruprasad R, year: 2009 }
+  - { name: Hima Bindu LVNK, year: 2008, url: "https://himalakkaraju.github.io/" }
+  - { name: Rahul Kumar Saherawat, year: 2008 }
+  - { name: Shanmugha Krishnan S, year: 2008 }
+  - { name: Vikram Tankasali, year: 2008 }
+  - { name: Chekuri Srikanth Varma, year: 2007 }
+  - { name: G Dinesh, year: 2007 }
+  - { name: Mayur Senjalia, year: 2007 }
+  - { name: Mehul Parsana, year: 2007 }
+  - { name: R. Sriraghavendra, year: 2007 }
+  - { name: Rashmin Babaria, year: 2007 }
+  - { name: Sreedal Menon, year: 2007 }
+  - { name: Urvang Joshi, year: 2007 }
+  - { name: Dinesh Khandelwal, year: 2006 }
+  - { name: Karthik Kumar, year: 2006 }
+  - { name: Krishnan Suresh Kumar, year: 2006 }
+  - { name: Samik Datta, year: 2006 }
+  - { name: Shobhit Singh, year: 2006 }
+  - { name: Pannagadatta Shivaswamy, year: 2005 }
+  - { name: Niranjan K. Boorah, year: 2004 }
+  - { name: Rahul Agarwal, year: 2004 }
+  - { name: ShivaramaKrishnan K. R., year: 2004 }
+
+alumni_project_associates:
+  - { name: Sarmistha Dutta, year: 2015 }
+  - { name: Trapit Bansal, year: 2013 }
