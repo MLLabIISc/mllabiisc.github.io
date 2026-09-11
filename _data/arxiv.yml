@@ -1,0 +1,25 @@
+# arXiv category names, used for the "areas" tags in _bibliography/papers.bib.
+# Source: https://arxiv.org/category_taxonomy
+cs.AI: Artificial Intelligence
+cs.AR: Hardware Architecture
+cs.CL: Computation and Language
+cs.CR: Cryptography and Security
+cs.CV: Computer Vision and Pattern Recognition
+cs.CY: Computers and Society
+cs.DC: Distributed, Parallel, and Cluster Computing
+cs.DS: Data Structures and Algorithms
+cs.HC: Human-Computer Interaction
+cs.IR: Information Retrieval
+cs.LG: Machine Learning
+cs.LO: Logic in Computer Science
+cs.NE: Neural and Evolutionary Computing
+cs.OS: Operating Systems
+cs.RO: Robotics
+cs.SI: Social and Information Networks
+eess.IV: Image and Video Processing
+eess.SY: Systems and Control
+math.OC: Optimization and Control
+q-bio.BM: Biomolecules
+q-bio.QM: Quantitative Methods
+quant-ph: Quantum Physics
+stat.ML: Machine Learning (Statistics)

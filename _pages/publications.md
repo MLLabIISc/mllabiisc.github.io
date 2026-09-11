@@ -11,9 +11,11 @@ nav_order: 2
 
 <!-- Bibsearch Feature -->
 
+{% include bib_filter.liquid %}
+
 {% include bib_search.liquid %}
 
-<div class="publications">
+<div class="publications" id="pub-list">
 
 {% bibliography %}
 

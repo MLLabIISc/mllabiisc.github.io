@@ -300,6 +300,9 @@ enable_publication_badges:
 filtered_bibtex_keywords:
   [
     abbr,
+    areas,
+    subareas,
+    venue_type,
     abstract,
     additional_info,
     altmetric,

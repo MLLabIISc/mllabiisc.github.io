@@ -1,0 +1,73 @@
+<!-- Publication tag filter (Area / Sub-area / Venue). Tags come from the areas, subareas, abbr and venue_type fields in papers.bib; logic in assets/js/bibfilter.js -->
+<style>
+  .tag-hidden {
+    display: none !important;
+  }
+  .pub-tags {
+    display: none;
+  }
+  #pub-list .pub-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 0.3rem;
+  }
+  .pub-tag {
+    font-size: 0.7rem;
+    line-height: 1.4;
+    padding: 0 0.5rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 1rem;
+    background: transparent;
+    color: var(--global-text-color-light);
+    cursor: pointer;
+  }
+  .pub-tag-area {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+  }
+  .pub-tag:hover,
+  .pub-tag:focus {
+    background: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    color: var(--global-bg-color);
+    outline: none;
+  }
+  #pub-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+  #pub-filter label {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  #pub-filter select {
+    max-width: 16rem;
+    margin-left: 0.25rem;
+    padding: 0.15rem 0.35rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.25rem;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+  }
+  #pf-count {
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+  }
+</style>
+
+<div id="pub-filter" role="search" aria-label="Filter publications by tag">
+  <label>Area (arXiv) <select id="pf-area"></select></label>
+  <label>Line of work <select id="pf-sub"></select></label>
+  <label>Venue <select id="pf-venue"></select></label>
+  <button id="pf-reset" type="button" class="btn btn-sm z-depth-0">Reset</button>
+  <span id="pf-count" aria-live="polite"></span>
+</div>
+
+<script>
+  window.ARXIV_NAMES = {{ site.data.arxiv | jsonify }};
+</script>
+<script src="{{ '/assets/js/bibfilter.js' | relative_url | bust_file_cache }}" defer></script>

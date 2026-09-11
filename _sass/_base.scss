@@ -1422,3 +1422,8 @@ figure.cover {
     color: #23212d !important;
   }
 }
+
+// Publication tags (see _includes/bib_filter.liquid): hidden everywhere except the Publications page list.
+.pub-tags {
+  display: none;
+}
