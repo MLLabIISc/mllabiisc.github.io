@@ -5,7 +5,7 @@ faculty:
   - name: Prof. Chiranjib Bhattacharyya
     photo: chiru2.png
     url: https://www.csa.iisc.ac.in/~chiru/
-    role: Professor, CSA, Indian Institute of Science, Bangalore
+    role: Professor, CSA, Indian Institute of Science, Bengaluru
     email: chiru@iisc.ac.in
 
 phd:
@@ -151,7 +151,7 @@ alumni_phd:
     url: https://cse.iitkgp.ac.in/~sourangshu/
     role: Assistant Professor, Dept. of CSE, IIT Kharagpur
     details:
-      - Scientist, Yahoo! Labs, Bangalore
+      - Scientist, Yahoo! Labs, Bengaluru
 
 # Year is the joining year.
 alumni_masters_research:

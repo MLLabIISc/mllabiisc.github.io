@@ -8,7 +8,7 @@ middle_name:
 last_name: Lab
 contact_note: >
   If you are interested in our work, please contact mllab.csa@iisc.ac.in.<br>
-  Room No. 251, Department of Computer Science and Automation, Indian Institute of Science, Bangalore, India (<a href="https://goo.gl/maps/9nz5pNfZmJu7NSbF7">Maps</a>)
+  Room No. 251, Department of Computer Science and Automation, Indian Institute of Science, Bengaluru, India (<a href="https://goo.gl/maps/9nz5pNfZmJu7NSbF7">Maps</a>)
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Machine Learning Lab at the Indian Institute of Science.
 footer_text: >
@@ -194,6 +194,7 @@ exclude:
   - _pages/teaching.md
   - _books/
   - REVIEW.md
+  - WEBSITE_ISSUES.md
 keep_files:
   - CNAME
   - .nojekyll

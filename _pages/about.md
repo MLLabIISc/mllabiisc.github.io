@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='https://www.csa.iisc.ac.in/'>Department of Computer Science and Automation,</a> <a href='https://www.iisc.ac.in/'>Indian Institute of Science,</a> <a href='https://en.wikipedia.org/wiki/Bengaluru'>Bangalore.</a>
+subtitle: <a href='https://www.csa.iisc.ac.in/'>Department of Computer Science and Automation,</a> <a href='https://www.iisc.ac.in/'>Indian Institute of Science,</a> <a href='https://en.wikipedia.org/wiki/Bengaluru'>Bengaluru.</a>
 
 profile:
   align: right
@@ -28,7 +28,7 @@ The Machine Learning Lab of the Department of Computer Science and Automation at
 
 To this end, we develop numerous machine learning algorithms and tools for complex real-world applications. We want to be able to build AI-enabled systems that solve problems for social good. We are actively pursuing applications in the areas of computational biology, object detection in images, video segmentation and summarization, detection of rare topics in text documents, and statistical modeling of computer systems.
 
-We are located in Bangalore, which is the Silicon Valley of India. We also collaborate with industry as well as other universities on cutting-edge research.
+We are located in Bengaluru, which is the Silicon Valley of India. We also collaborate with industry as well as other universities on cutting-edge research.
 
 We are unable to respond to part-time, short-term (less than one year), and/or remote student mentorship requests. For open positions, see the [Opportunities]({{ '/opportunities/' | relative_url }}) page.
 
