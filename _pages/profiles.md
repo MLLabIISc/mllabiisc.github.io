@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /people/
-title: people
-description: members and alumni of the Machine Learning Lab
+title: People
+description: Members and alumni of the Machine Learning Lab.
 nav: true
 nav_order: 3
 ---
@@ -18,7 +18,7 @@ nav_order: 3
   <p>
     Jump to:
     <a href="#phd">PhD Students</a>, <a href="#mtech_research">M.Tech (Research) Students</a>, <a href="#mtech">M.Tech Students</a>,
-    <a href="#project_associates">Project Associates</a>, <a href="#alumni">Alumni</a>.
+    {% if site.data.people.project_associates.size > 0 %}<a href="#project_associates">Project Associates</a>, {% endif %}<a href="#alumni">Alumni</a>.
   </p>
 
 {% assign groups = "faculty:Faculty|phd:PhD Students|mtech_research:M.Tech (Research) Students|mtech:M.Tech Students|project_associates:Project Associates|alumni_phd:Alumni (PhD)" | split: "|" %}
@@ -28,7 +28,15 @@ nav_order: 3
 {% assign members = site.data.people[key] %}
 {% if g[0] == "alumni_phd" %}<a id="alumni"></a>{% endif %}
 
+{% if members.size > 0 %}
   <h2 id="{{ g[0] }}" class="mt-4">{{ g[1] }}</h2>
+  {% if key == "mtech" %}
+  <ul class="list-unstyled row row-cols-1 row-cols-sm-2">
+    {% for p in members %}
+      <li class="col mb-1">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}{% assign note = p.role | remove: "M.Tech student" | strip %}{% if note != "" %} {{ note }}{% endif %}{% if p.email %} · <a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
   <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
     {% for p in members %}
       <div class="col mb-4 people-card">
@@ -48,6 +56,8 @@ nav_order: 3
       </div>
     {% endfor %}
   </div>
+  {% endif %}
+{% endif %}
 {% endfor %}
 
 {% assign lists = "alumni_masters_research:Alumni (Masters by Research)|alumni_masters:Alumni (Masters)|alumni_project_associates:Alumni (Project Associates)" | split: "|" %}

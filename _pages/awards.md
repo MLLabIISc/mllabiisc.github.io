@@ -1,19 +1,28 @@
 ---
 layout: page
 permalink: /awards/
-title: awards & press
+title: Awards & Press
 description: Awards received by lab members and press coverage of our work.
-nav: true
+nav: false
 nav_order: 6
 ---
 
 ## Awards
 
+**2025 — Spotlight, NeurIPS 2025**<br>
+"[ModHiFi: Identifying High Fidelity Predictive Components for Model Modification](https://openreview.net/forum?id=lClK4uBxSG)" by Dhruva Kashyap, Chaitanya Murti, Pranav K Nayak, Tanay Narshana, and Chiranjib Bhattacharyya was selected as a Spotlight at NeurIPS 2025.
+
+**2024 — Best M.Tech Student**<br>
+Dhruva Kashyap received the Computer Society of India Bangalore Medal for Best M.Tech Student. Advised by Prof. Chiranjib Bhattacharyya.
+
+**2022 — Best M.Tech Student**<br>
+Tanay Narshana received the Computer Society of India Bangalore Medal for Best M.Tech Student. Advised by Prof. Chiranjib Bhattacharyya.
+
 **2021 — Winner, ICSR 2021 Robot Design Competition (Innovation in Software Award)**<br>
 Nabanita Paul, Chiranjib Bhattacharyya. [Details](https://www.colips.org/conferences/icsr2021/wp/awards/)
 
 **2019 — Best M.Tech Student**<br>
-Pooja Ravi Kulkarni is selected for the Computer Society of India Bangalore Medal for Best M.Tech Student 2018. Advised by Prof. Chiranjib Bhattacharyya.
+Pooja Ravi Kulkarni was selected for the Computer Society of India Bangalore Medal for Best M.Tech Student 2018. Advised by Prof. Chiranjib Bhattacharyya.
 
 **Dec 2018 — Google PhD Fellowship**<br>
 Shikhar Vashishth is awarded the Google PhD Fellowship. Advised by Prof. Partha Talukdar and Prof. Chiranjib Bhattacharyya.

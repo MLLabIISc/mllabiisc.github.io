@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[COVID-SWIFT](/projects/1_covid-swift/), developed by the ML Lab and Niramai, is now launched as [XraySetu](https://www.xraysetu.com).
+[COVID-SWIFT](/projects/1_covid-swift/), developed by the ML Lab and Niramai, has now been launched as [XraySetu](https://www.xraysetu.com).

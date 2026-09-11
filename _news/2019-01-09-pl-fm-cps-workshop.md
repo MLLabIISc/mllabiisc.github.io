@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Joint workshop by IISc, [Microsoft Research](https://www.microsoft.com/en-us/research/), and U. Pennsylvania on Programming Languages, Formal Methods, and Cyber-Physical Systems, Jan. 10th 2019, in the Department of CSA.
+A joint workshop by IISc, [Microsoft Research](https://www.microsoft.com/en-us/research/), and the University of Pennsylvania on Programming Languages, Formal Methods, and Cyber-Physical Systems will be held on January 10, 2019, in the Department of CSA.

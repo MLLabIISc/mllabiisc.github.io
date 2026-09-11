@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Paper [Near-optimal sample complexity bounds for learning Latent k-polytopes and applications to Ad-Mixtures](https://proceedings.icml.cc/static/paper_files/icml/2020/6335-Paper.pdf) by Chiranjib Bhattacharyya and [Ravindran Kannan](https://en.wikipedia.org/wiki/Ravindran_Kannan) published in ICML 2020.
+The paper "[Near-optimal sample complexity bounds for learning Latent k-polytopes and applications to Ad-Mixtures](https://proceedings.icml.cc/static/paper_files/icml/2020/6335-Paper.pdf)" by Chiranjib Bhattacharyya and [Ravindran Kannan](https://en.wikipedia.org/wiki/Ravindran_Kannan) was published in ICML 2020.

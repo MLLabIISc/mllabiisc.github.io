@@ -7,7 +7,8 @@ first_name: Machine Learning
 middle_name: 
 last_name: Lab
 contact_note: >
-  If you are interested in our work, please contact mllab.csa@iisc.ac.in.
+  If you are interested in our work, please contact mllab.csa@iisc.ac.in.<br>
+  Room No. 251, Department of Computer Science and Automation, Indian Institute of Science, Bangalore, India (<a href="https://goo.gl/maps/9nz5pNfZmJu7NSbF7">Maps</a>)
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Machine Learning Lab at the Indian Institute of Science.
 footer_text: >
@@ -46,9 +47,8 @@ repo_trophies:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false
 socials_in_search: false
-posts_in_search: true
 bib_search: true
 
 # Dimensions
@@ -84,8 +84,6 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Recent Work # blog_name will be displayed in your blog page
-blog_description: Updates from the ML Lab.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -260,8 +258,6 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

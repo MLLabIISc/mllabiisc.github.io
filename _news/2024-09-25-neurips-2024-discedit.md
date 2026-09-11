@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Paper [DisCEdit: Model Editing by Identifying Discriminative Components](https://openreview.net/forum?id=tuiqq1G8I5) by Chaitanya Murti and Chiranjib Bhattacharyya published in NeurIPS 2024.
+The paper "[DisCEdit: Model Editing by Identifying Discriminative Components](https://openreview.net/forum?id=tuiqq1G8I5)" by Chaitanya Murti and Chiranjib Bhattacharyya was published in NeurIPS 2024.

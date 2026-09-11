@@ -41,19 +41,11 @@ phd:
     email: sunnym@iisc.ac.in
 
 mtech_research:
-  - name: Ravi Raja
-    photo: raviraja.jpg
-    url: https://sites.google.com/view/raviraja/
-    role: M.Tech (Research), shared with Programming Language Lab, started Aug 2019
-    email: raviraja@iisc.ac.in
-    linkedin: https://www.linkedin.com/in/raviraja-iisc/
-    details:
-      - B.E., Computer Science and Engineering, UIET Hoshiarpur, Panjab University
   - name: Rajiv Porana
     role: M.Tech (Research)
     email: rajivporana@iisc.ac.in
   - name: Viren Luke Radhakrishnan
-    role: M.Tech (Research) (ERP from AMD)
+    role: M.Tech (Research), ERP from AMD
     email: virenluke@iisc.ac.in
 
 mtech:
@@ -87,17 +79,22 @@ mtech:
   - name: Sahoo Mayajeet Satyaranjan Ranjan
     role: M.Tech student (AI)
     email: mayajeets@iisc.ac.in
-
-project_associates:
   - name: Pranav K Nayak
-    role: Project Associate
+    role: M.Tech student
     email: pranavk@iisc.ac.in
     details:
       - B.Tech CSE, IIT Hyderabad
 
+project_associates: []
+
 alumni_phd:
   - name: Chaitanya Murti
     role: Research Scientist at HP AI Research
+  - name: Aadirupa Saha
+    url: https://aadirupa.github.io/
+    role: Assistant Professor, Department of Computer Science, University of Illinois Chicago (since Fall 2025)
+    details:
+      - Ph.D., Dept. of CSA, IISc, advised by Aditya Gopalan and Chiranjib Bhattacharyya
   - name: Achintya Kundu
     url: https://achikundu.github.io/
     role: Principal Scientist, HP AI Lab
@@ -158,6 +155,7 @@ alumni_phd:
 
 # Year is the joining year.
 alumni_masters_research:
+  - { name: Ravi Raja, year: 2019, url: "https://sites.google.com/view/raviraja/" }
   - { name: Abhinav Anand, year: 2016 }
   - { name: Ankit Jauhari, year: 2014, url: "https://linkedin.com/in/aj696" }
   - { name: Jagdeep Pani, year: 2013 }
@@ -168,6 +166,8 @@ alumni_masters_research:
   - { name: Vinay Jethava, year: 2006 }
 
 alumni_masters:
+  - { name: Dhruva Kashyap, year: 2022 }
+  - { name: Tanay Narshana, year: 2020 }
   - { name: Pooja Ravi Kulkarni, year: 2016, url: "https://www.linkedin.com/in/pooja-kulkarni-32541aa6/" }
   - { name: Prachi Sharma, year: 2016 }
   - { name: Vysakh P R, year: 2016, url: "https://www.linkedin.com/in/vysakhpr/" }
@@ -225,6 +225,6 @@ alumni_masters:
   - { name: ShivaramaKrishnan K. R., year: 2004 }
 
 alumni_project_associates:
-  - { name: Dhruva Kashyap }
+  - { name: Dhruva Kashyap, year: 2025 }
   - { name: Sarmistha Dutta, year: 2015 }
   - { name: Trapit Bansal, year: 2013 }

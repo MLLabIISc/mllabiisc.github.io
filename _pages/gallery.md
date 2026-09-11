@@ -1,9 +1,9 @@
 ---
 layout: page
 permalink: /gallery/
-title: gallery
+title: Gallery
 description: Talks, events, and moments from the lab.
-nav: true
+nav: false
 nav_order: 8
 ---
 
@@ -25,25 +25,18 @@ nav_order: 8
   </div>
 </div>
 
-## Events & the lab
+## Events & the Lab
 
+<!-- Years marked (placeholder) are not confirmed yet. -->
 <div class="row">
-  {% assign photos = "labpic.jpg:The ML Lab,lab1.jpg:The ML Lab,main-building.jpg:IISc main building,fateworkshop.jpg:FATE ML workshop,deeptech.jpg:Deep Tech Entrepreneurship,deeptechvol.jpg:Deep Tech Entrepreneurship volunteers" | split: "," %}
+  {% assign photos = "fateworkshop.jpg:FATE ML workshop, 2020|chiruhbd.jpg:Lab celebration, 2020 (placeholder)|deeptech.jpg:Deep Tech Entrepreneurship, 2019|deeptechvol.jpg:Deep Tech Entrepreneurship volunteers, 2019|lab1.jpg:The ML Lab, 2019 (placeholder)|labpic.jpg:The ML Lab, 2018 (placeholder)" | split: "|" %}
   {% for photo in photos %}
     {% assign parts = photo | split: ":" %}
     {% assign path = parts[0] | prepend: "assets/img/gallery/" %}
-    {% assign caption = parts[1] %}
+    {% assign caption = parts[1] | remove: " (placeholder)" %}
     <div class="col-sm-6 mt-3">
       {% include figure.liquid loading="lazy" path=path class="img-fluid rounded z-depth-1" alt=caption %}
       <div class="caption">{{ caption }}</div>
     </div>
   {% endfor %}
-</div>
-
-## Informals
-
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3">
-    {% include figure.liquid loading="lazy" path="assets/img/gallery/chiruhbd.jpg" class="img-fluid rounded z-depth-1" alt="Lab celebration" %}
-  </div>
 </div>

@@ -9,17 +9,21 @@ Sources: the live old site, scraped on 2026-09-10 (treated as the source of trut
 ## Config / structure
 - [ ] `projects.output` flipped back to `true` (you had set it to `false`), as you asked.
 - [ ] `REVIEW.md` added to `exclude:`. None of your other `_config.yml` edits were touched.
-- [ ] Nav order: blog "Recent Work" (1, yours), publications (2), people (3), projects (4), news (5), awards & press (6), opportunities (7), gallery (8).
+- [x] Menu and page titles are in Title Case (About, People, Research ▾, More ▾, Publications, Projects, News, Awards & Press, Gallery, Opportunities).
+- [x] News items: grammar pass ("The paper \"…\" by … was published in …", ICSR award sentence rewritten with a subject, workshop and XraySetu sentences fixed). No facts changed.
+- [x] Menu (your request): about · people · research ▾ (publications, projects) · more ▾ (news, awards & press, gallery, ─, opportunities). The dropdowns are `_pages/research.md` and `_pages/more.md` (al-folio's `dropdown: true` + `children:`); the pages inside them have `nav: false`.
+- [x] Blog ("Recent Work") deleted: `_pages/blog.md` removed, plus the blog-only config keys (`blog_name`, `blog_description`, demo `display_tags`/`display_categories`, `posts_in_search`). It had no posts. `related_blog_posts` stays because the news items use al-folio's post layout, which reads it.
+- [x] Site search (the "ctrl k" button) turned off: `search_enabled: false`. The search box on the publications page is separate (`bib_search`) and stays.
 - [ ] Removed the al-folio demo news (`_news/announcement_*.md`) and `_pages/about_einstein.md`.
 - [ ] Not ported: the old footer line "Funding: Ministry of Human Resource Development, Government of India". Add it to `footer_text` if you want it.
 - [ ] Leftover al-folio demo asset `assets/html/relativity.html` (mentions Einstein) is still in the repo and gets published. Nothing links to it, but you may want to delete it along with the unused demo images `assets/img/1.jpg`–`12.jpg`, `prof_pic*.jpg`, and `assets/pdf/example_pdf.pdf`. I didn't delete these because they're template files.
 - [ ] Not ported: `aboutwebsite.html` (template credits), the standalone `covid-swift/` microsite (its content is on the COVID-SWIFT project page), and `mini_lecture_series` (only in the 2020 repo).
 
 ## Home (`_pages/about.md`)
-- [ ] Profile image is the old carousel's lab photo (`assets/img/gallery/labpic.jpg`). Check it works as the main image.
-- [ ] Address block is Room 251, CSA, IISc, plus a Maps link, from the old footer.
+- [x] Home-page image removed (your request). The address (Room No. 251, CSA, IISc, Bangalore, plus a Maps link) moved to the contact line under the social icons (`contact_note` in `_config.yml`), after your existing email sentence.
+- [x] Grammar fixes in the intro ("set up", "real-world", "AI-enabled", "areas of", "Silicon Valley", "cutting-edge", serial commas).
 - [ ] Added the old site's mentorship-request disclaimer and a link to /opportunities/.
-- [x] Collaborators strip: Microsoft Research and AMD only, as you asked. LinkedIn, Microsoft, Tata Motors and Ati Motors were removed along with their logo files. The AMD logo is the official SVG from Wikimedia Commons (`assets/img/logos/amd.svg`).
+- [x] Collaborators strip: HP AI Research and AMD only, as you asked. Microsoft Research, LinkedIn, Microsoft, Tata Motors and Ati Motors were removed along with their logo files. The HP logo is the official HP SVG from Wikimedia Commons (`assets/img/logos/hp.svg`); there is no separate "HP AI Research" logo, so the lab name appears only as the alt text and tooltip. The AMD logo is also from Wikimedia Commons (`assets/img/logos/amd.svg`).
 
 ## News (`_news/`, 32 items)
 - [ ] **Items from HTML comments.** The 2021–2022 items were commented out on the old homepage, so they weren't visible there: NeurIPS'22, ICSR'21 award, ICML'21, XraySetu launch, ICRA'21, AIES'21, AAAI'21 (DSLR). I included them. Delete any you had hidden on purpose.
@@ -44,10 +48,13 @@ Sources: the live old site, scraped on 2026-09-10 (treated as the source of trut
 - [ ] **"Priya Sarkaer" → "Priya Sarkar".** Her email `priyasarkar@` supports this.
 - [ ] **Khushi's email:** the old page showed `khushimehta@iisc.ac.in` but its mailto pointed to `khushimetha@`. I used `khushimehta@` to match the surname Mehta. Please verify.
 - [ ] **"Sahoo Mayajeet Satyaranjan Ranjan"** looks like a doubled "Ranjan". I left it unchanged.
-- [x] **Your changes:** Chaitanya Murti moved to Alumni (PhD) as "Research Scientist at HP AI Research" (no photo, placeholder shown). Dhruva Kashyap moved to Alumni (Project Associates). ⚠️ I don't know Dhruva's joining year, so it's left blank; the list now omits ", year" when none is given. Tell me the year to add it.
+- [x] **Your changes (2026-09-11):** Ravi Raja moved to Alumni (Masters by Research, 2019). Aadirupa Saha added to Alumni (PhD) as "Assistant Professor, Department of Computer Science, University of Illinois Chicago (since Fall 2025)", with PhD advisors Aditya Gopalan and Chiranjib Bhattacharyya. You wrote "Professor at UIC"; her homepage (aadirupa.github.io) says Asst. Professor, so I used that. M.Tech students are now a text list (name, program note, email), with no photos.
+- [x] **Your changes:** Chaitanya Murti moved to Alumni (PhD) as "Research Scientist at HP AI Research" (no photo, placeholder shown). Dhruva Kashyap is listed in both Alumni (Masters, 2022) and Alumni (Project Associates, 2025), with the years you gave. Tanay Narshana is in Alumni (Masters, 2020); the lists show the joining year only, so his 2020–2022 range shows as 2020. Pranav K Nayak moved from Project Associate to current M.Tech student. With no current project associates, that section and its "Jump to" link are hidden until someone is added again.
+- [x] Awards: added Best M.Tech Student (CSI Bangalore Medal) for Dhruva Kashyap (2024) and Tanay Narshana (2022), both advised by Prof. Chiranjib Bhattacharyya. I left the medal year out of the sentence, because the existing entries are inconsistent about it (e.g. a 2017 medal listed under 2018).
 - [ ] **Possibly graduated:** check the M.Tech, M.Tech (Research) and project associate lists against who is still in the lab. Also check the PhD list (e.g. Nabanita, started 2018; Mariamma, started 2019). I did not move anyone to alumni.
 - [ ] **Photos:** Achintya Kundu's photo couldn't be downloaded from the old site, so he shows the placeholder. So do everyone the old site gave the generic `bio-photo.jpg`.
 - [ ] Minor normalisation: "Bhubaneshwar" → "Bhubaneswar"; "Linkedin" → "LinkedIn"; LinkedIn URLs stripped of `?originalSubdomain=in`; "Anjali Jain Masters, 2014" → "Anjali Jain, 2014"; Shikhar's role no longer links to Carolyn Rose.
+- [x] Sayantan Pramanik's photo was replaced by you (2026-09-11); kept as is.
 - [ ] Deleted 10 photos from the old site that no current page uses (older members such as akshaj_verma, dhiraj, kavita, pooja, prashant, prateek, rishabh, saby, sweta, vini).
 
 ## Publications (`_bibliography/papers.bib`: 139 → 131 entries)
@@ -56,7 +63,7 @@ Sources: the live old site, scraped on 2026-09-10 (treated as the source of trut
   - `Antony_2023`: Sci. Reports 2023, from Crossref (DOI 10.1038/s41598-023-44653-y), plus a `code` link to the WACXR dataset repo
   - `Chaudhary2026NCDF`: ICML 2026, from the BibTeX on the NCDF project page. I appended ", {ICML} 2026" to the booktitle and added a `website` link.
   - `Shastry2022ShotFrugal`: arXiv 2210.06971, from the arXiv API. **The old site said 2023, but arXiv v1 is from Oct 2022**, so I used 2022.
-  - ⚠️ `Sharma2025Steering` and `Kashyap2025ModHiFi`: **hand-built** from the old site's title and author list, because DBLP was behind a bot-check and OpenReview returned 403. Check the author spellings (e.g. "Pranav K. Nayak") and the booktitle. ModHiFi has `note = {Spotlight}`.
+  - ⚠️ `Sharma2025Steering` and `Kashyap2025ModHiFi`: **hand-built** from the old site's title and author list, because DBLP was behind a bot-check and OpenReview returned 403. Check the author spellings (e.g. "Pranav K. Nayak") and the booktitle. ModHiFi shows a Spotlight award badge (`award_name`/`award`).
 - [ ] **Removed 14 arXiv (CoRR) copies of papers that are also in the bib as published versions:** LevAttention, Random Separating Hyperplane, Predicting Ground State, Rawlsian Fair Adaptation, Learning a Latent Simplex, How Many Pairwise Preferences, RESIDE, Lean 2-layer RBMs, Mining Block I/O Traces, Provable SVD topics, Dynamic Multi-Relational CRP, Mean Field Methods (arXiv 2011 copy of the 2001 JAIR paper), DSLR, and Finding a latent k-simplex (SODA). Standalone preprints were kept.
 - [ ] **Fixed** the garbled DBLP title in `DBLP:conf/nips/JethavaMBD12` ("The Lovász ϑ function, SVMs and finding large dense subgraphs").
 - [ ] **Fixed** 15 URLs that contained DBLP's `\_` escapes. They would have produced broken links.
@@ -69,8 +76,7 @@ Sources: the live old site, scraped on 2026-09-10 (treated as the source of trut
 - [x] ModHiFi now shows a **Spotlight** award badge (al-folio `award_name`/`award` fields). Clicking it shows "Published as a Spotlight in NeurIPS 2025." The badge also appears in the homepage's selected papers.
 
 ## Projects (`_projects/`, 8 pages; collection re-enabled)
-- [x] **The text is now word for word from the old site** (you asked for this). The 7 projects are copied from mllab.csa.iisc.ac.in/projects and the COVID-19 page from /csacovid19. The original paragraphs, author lines (e.g. "-Mariamma") and "Read more…" links are copied as is, and commented-out markup is dropped. I added no text and no card descriptions. Inline colours and styles on the COVID-19 page were removed; the words are unchanged. An automated check confirmed every sentence on the new pages appears verbatim on the old pages.
-- [ ] Because the text is verbatim, the old site's typos are kept, e.g. "impairement", "Alzheimers", "Center for Brain Research", "Has the concept the Autonomous vehicles…", "Ati motors", "Xraysetu", and the unfinished sentence "…study their effectiveness in / Suppressing COVID19…". Tell me if you want any of them fixed.
+- [x] **Grammar pass (your request, 2026-09-11):** the project pages started as word-for-word copies of the old site; you then asked for grammar, punctuation and capitalization to be fixed everywhere, including projects. So they are **no longer verbatim**. The content, claims, names and links are unchanged; only wording errors were fixed. Examples: "impairement" → "impairment", "Alzheimers" → "Alzheimer's", "Center" → "Centre", "Ati motors"/"ATI Motors" → "Ati Motors", "Whatsapp" → "WhatsApp", "Xray-Setu"/"Xraysetu" → "XraySetu", "can be effective as Lockdown" → "can be as effective as a lockdown", and the sentence the old site split across two paragraphs ("…effectiveness in / Suppressing…") is rejoined. Titles are in Title Case. "DST" in the DSLR text is still unexpanded, as on the old site. "We will soon be sharing our paper" (COVID-SWIFT) is kept, although the paper has since appeared in Sci. Reports 2023; tell me if you want that updated.
 - [ ] The COVID-SWIFT links still point to `https://mllab.csa.iisc.ac.in/covid-swift/`, the old microsite. That page will disappear when this site replaces the old one.
 - [ ] Order (`importance`): COVID-SWIFT, COVID-19 projects, social robotics, DSLR, LiDAR SLAM, cognitive impairment, community detection, program synthesis.
 - [ ] No card image for COVID-SWIFT, COVID-19 and DSLR, because the old site had none.
@@ -79,9 +85,11 @@ Sources: the live old site, scraped on 2026-09-10 (treated as the source of trut
 - [ ] Copied the 8 awards and 3 press items. "Karthik Kumara" is kept as on the old site; it may be "Karthik Kumar", as listed in alumni.
 
 ## Opportunities (`_pages/opportunities.md`)
-- [x] All old postings were removed, as you asked. The page now shows only the old site's own wording: "No positions open currently." plus the mentorship-request note from the old homepage.
+- [x] All old postings were removed. The page shows "No positions are open currently." and the mentorship-request note, both in bold (your request); "Opportunities" is capitalised in the menu and title.
 
 ## Gallery (`_pages/gallery.md`)
+- [x] Your request: "Informals" section removed and its photo moved to "Events & the Lab"; IISc main building photo removed (file deleted). Captions now carry years, sorted newest first.
+- [ ] ⚠️ **Placeholder years, please confirm:** The ML Lab (`labpic.jpg`) **2018**, The ML Lab (`lab1.jpg`) **2019**, Lab celebration (`chiruhbd.jpg`) **2020**. FATE ML workshop 2020 and Deep Tech Entrepreneurship 2019 come from the news items.
 - [ ] 2 YouTube talks (Amazon AI Conclave 2018, NASSCOM 2016) plus the old homepage's carousel photos and the one informal photo.
 - [ ] **I guessed the captions from filenames:** labpic/lab1 → "The ML Lab"; deeptech/deeptechvol → "Deep Tech Entrepreneurship (volunteers)"; fateworkshop → "FATE ML workshop"; main-building → "IISc main building"; chiruhbd → "Lab celebration". Please correct them.
 

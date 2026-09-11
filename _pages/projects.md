@@ -1,9 +1,9 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: Research and applied projects from the lab.
-nav: true
+nav: false
 nav_order: 4
 horizontal: false
 ---

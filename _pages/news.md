@@ -1,9 +1,9 @@
 ---
 layout: page
-title: news
+title: News
 permalink: /news/
 description: News from the Machine Learning Lab.
-nav: true
+nav: false
 nav_order: 5
 ---
 

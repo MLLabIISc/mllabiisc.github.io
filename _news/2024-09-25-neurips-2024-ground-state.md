@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Paper [Predicting Ground State Properties: Constant Sample Complexity and Deep Learning Algorithms](https://openreview.net/forum?id=ybLXvqJyQA) by Marc Wanner (Chalmers), Laura Lewis (Cambridge), Chiranjib Bhattacharyya (IISc), Devdatt Dubhashi (Chalmers), and Alexandru Gheorghiu (Chalmers) published in NeurIPS 2024.
+The paper "[Predicting Ground State Properties: Constant Sample Complexity and Deep Learning Algorithms](https://openreview.net/forum?id=ybLXvqJyQA)" by Marc Wanner (Chalmers), Laura Lewis (Cambridge), Chiranjib Bhattacharyya (IISc), Devdatt Dubhashi (Chalmers), and Alexandru Gheorghiu (Chalmers) was published in NeurIPS 2024.

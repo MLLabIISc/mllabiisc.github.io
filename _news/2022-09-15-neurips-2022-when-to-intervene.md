@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Paper [When to Intervene: Learning Optimal Intervention Policies for Critical Events](/assets/pdf/9268.pdf) by Niranjan Damera Venkata (HP) and Chiranjib Bhattacharyya (IISc) published in NeurIPS 2022.
+The paper "[When to Intervene: Learning Optimal Intervention Policies for Critical Events](/assets/pdf/9268.pdf)" by Niranjan Damera Venkata (HP) and Chiranjib Bhattacharyya (IISc) was published in NeurIPS 2022.
