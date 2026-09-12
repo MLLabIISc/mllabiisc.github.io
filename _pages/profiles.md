@@ -15,6 +15,7 @@ nav_order: 3
 </style>
 
 <div class="people">
+  <p class="text-muted">All members are in the Department of Computer Science and Automation, IISc, unless noted otherwise.</p>
   <p>
     Jump to:
     <a href="#phd">PhD Students</a>, <a href="#mtech_research">M.Tech (Research) Students</a>, <a href="#mtech">M.Tech Students</a>,
@@ -33,7 +34,7 @@ nav_order: 3
   {% if key == "mtech" %}
   <ul class="list-unstyled row row-cols-1 row-cols-sm-2">
     {% for p in members %}
-      <li class="col mb-1">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}{% assign note = p.role | remove: "M.Tech student" | strip %}{% if note != "" %} {{ note }}{% endif %}{% if p.email %} · <a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}</li>
+      <li class="col mb-1">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}{% assign note = p.role | remove: "M.Tech student" | strip %}{% if note != "" %} {{ note }}{% endif %}{% if p.details %} <span class="text-muted">({{ p.details | join: "; " }})</span>{% endif %}{% if p.email %} · <a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}</li>
     {% endfor %}
   </ul>
   {% else %}
@@ -65,7 +66,7 @@ nav_order: 3
 {% assign l = list | split: ":" %}
 
   <h2 id="{{ l[0] }}" class="mt-4">{{ l[1] }}</h2>
-  <p class="small text-muted">Year mentioned is the joining year.</p>
+  <p class="small text-muted">Years are the joining year, or joining–graduating years where known.</p>
   <ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3">
     {% assign key = l[0] %}
     {% for a in site.data.people[key] %}

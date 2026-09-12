@@ -1,15 +1,32 @@
-// Exact-match tag filter for the Publications page (Area / Sub-area / Venue).
-// Works alongside bibsearch.js: that script hides entries with the "unloaded" class,
-// this one uses "tag-hidden", and year headings are hidden when every entry under them is hidden by either.
+// Faceted tag filter for the Publications page (Area / Line of work / Venue), combined with the text search.
+// bibsearch.js hides entries that don't match the search box with the "unloaded" class; this script hides
+// entries that don't match the dropdowns with "tag-hidden". Dropdown counts are faceted: each option shows how
+// many publications would match if it were chosen, given the other active dropdowns and the current search.
 document.addEventListener("DOMContentLoaded", function () {
   const bar = document.getElementById("pub-filter");
   const list = document.getElementById("pub-list");
   if (!bar || !list) return;
 
-  const selArea = document.getElementById("pf-area");
-  const selSub = document.getElementById("pf-sub");
-  const selVenue = document.getElementById("pf-venue");
+  const sel = {
+    area: document.getElementById("pf-area"),
+    sub: document.getElementById("pf-sub"),
+    venue: document.getElementById("pf-venue"),
+  };
+  const chips = document.getElementById("pf-chips");
   const count = document.getElementById("pf-count");
+  const reset = document.getElementById("pf-reset");
+  const names = window.ARXIV_NAMES || {};
+  const state = { area: "", sub: "", venue: "" };
+
+  // Move the text search box into the panel.
+  const search = document.getElementById("bibsearch");
+  if (search) {
+    bar.querySelector(".pf-search").appendChild(search);
+    search.placeholder = "Search titles, authors, venues…";
+    search.setAttribute("aria-label", "Search publications");
+  } else {
+    bar.querySelector(".pf-search").remove();
+  }
 
   const split = (s) =>
     (s || "")
@@ -23,52 +40,92 @@ document.addEventListener("DOMContentLoaded", function () {
     return { li: li, areas: split(d.areas), subs: split(d.subareas), venue: (d.venue || "").trim(), vtype: (d.vtype || "").trim() };
   });
 
-  const tally = (list, key) => {
+  const tally = (arr, key) => {
     const m = new Map();
-    list.forEach((it) => [].concat(it[key]).forEach((v) => v && m.set(v, (m.get(v) || 0) + 1)));
+    arr.forEach((it) => [].concat(it[key]).forEach((v) => v && m.set(v, (m.get(v) || 0) + 1)));
     return m;
   };
+  // Option order is fixed (most common first) so the lists don't jump around as counts change.
+  const order = (key) =>
+    Array.from(tally(items, key).entries())
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .map((e) => e[0]);
+  const areaOrder = order("areas");
+  const subOrder = order("subs");
+  const typeOrder = order("vtype");
+  const venueOrder = order("venue");
 
-  const option = (value, label) => {
+  const matchVenue = (it, v) => (v.startsWith("type:") ? it.vtype === v.slice(5) : it.venue === v.slice(6));
+  const matches = (it, skip) =>
+    (skip === "area" || !state.area || it.areas.includes(state.area)) &&
+    (skip === "sub" || !state.sub || it.subs.includes(state.sub)) &&
+    (skip === "venue" || !state.venue || matchVenue(it, state.venue));
+  const searched = (it) => !it.li.classList.contains("unloaded");
+  const pool = (skip) => items.filter((it) => searched(it) && matches(it, skip));
+
+  const option = (value, label, disabled) => {
     const o = document.createElement("option");
     o.value = value;
     o.textContent = label;
+    o.disabled = !!disabled;
     return o;
   };
 
-  const names = window.ARXIV_NAMES || {};
-  const fill = (sel, map, byCount, named) => {
-    const keep = sel.value;
-    sel.innerHTML = "";
-    sel.appendChild(option("", "All"));
-    const entries = Array.from(map.entries()).sort((a, b) => (byCount ? b[1] - a[1] : 0) || a[0].localeCompare(b[0]));
-    entries.forEach(([v, n]) => sel.appendChild(option(v, (named && names[v] ? v + " — " + names[v] : v) + " (" + n + ")")));
-    sel.value = map.has(keep) ? keep : "";
+  const build = (s, total, groups, value) => {
+    s.innerHTML = "";
+    s.appendChild(option("", "All (" + total + ")"));
+    groups.forEach(([label, opts]) => {
+      const parent = label ? document.createElement("optgroup") : s;
+      if (label) parent.label = label;
+      opts.forEach(([v, text, n]) => parent.appendChild(option(v, text + " (" + n + ")", n === 0 && v !== value)));
+      if (label) s.appendChild(parent);
+    });
+    s.value = value;
+    s.closest(".pf-field").classList.toggle("is-active", !!value);
   };
 
-  // Area and venue options are fixed; sub-area options follow the selected area.
-  fill(selArea, tally(items, "areas"), true, true);
-  (function fillVenue() {
-    selVenue.appendChild(option("", "All"));
-    const types = document.createElement("optgroup");
-    types.label = "Type";
-    Array.from(tally(items, "vtype").entries())
-      .sort((a, b) => b[1] - a[1])
-      .forEach(([v, n]) => types.appendChild(option("type:" + v, v + " (" + n + ")")));
-    const venues = document.createElement("optgroup");
-    venues.label = "Venue";
-    Array.from(tally(items, "venue").entries())
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-      .forEach(([v, n]) => venues.appendChild(option("venue:" + v, v + " (" + n + ")")));
-    selVenue.appendChild(types);
-    selVenue.appendChild(venues);
-  })();
-  const fillSub = () => fill(selSub, tally(selArea.value ? items.filter((it) => it.areas.includes(selArea.value)) : items, "subs"), false);
-  fillSub();
+  const renderOptions = () => {
+    let p = pool("area");
+    let c = tally(p, "areas");
+    build(sel.area, p.length, [["", areaOrder.map((v) => [v, names[v] ? v + " — " + names[v] : v, c.get(v) || 0])]], state.area);
+    p = pool("sub");
+    c = tally(p, "subs");
+    build(sel.sub, p.length, [["", subOrder.map((v) => [v, v, c.get(v) || 0])]], state.sub);
+    p = pool("venue");
+    const ct = tally(p, "vtype");
+    const cv = tally(p, "venue");
+    build(
+      sel.venue,
+      p.length,
+      [
+        ["Type", typeOrder.map((v) => ["type:" + v, v, ct.get(v) || 0])],
+        ["Venue", venueOrder.map((v) => ["venue:" + v, v, cv.get(v) || 0])],
+      ],
+      state.venue,
+    );
+  };
 
+  const labels = { area: "Area", sub: "Line of work", venue: "Venue" };
+  const renderChips = () => {
+    chips.innerHTML = "";
+    Object.keys(state).forEach((k) => {
+      if (!state[k]) return;
+      const v = k === "venue" ? state[k].replace(/^(type|venue):/, "") : state[k];
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "pf-chip";
+      b.dataset.key = k;
+      b.title = "Remove this filter";
+      b.innerHTML = "<span>" + labels[k] + ": <b></b></span><span class='pf-x' aria-hidden='true'>×</span>";
+      b.querySelector("b").textContent = v;
+      b.setAttribute("aria-label", "Remove filter " + labels[k] + ": " + v);
+      chips.appendChild(b);
+    });
+    reset.disabled = !Object.values(state).some(Boolean) && !(search && search.value);
+  };
+
+  // Hide a year heading and its list when none of its entries are visible; update the count.
   const hidden = (el) => el.classList.contains("tag-hidden") || el.classList.contains("unloaded");
-
-  // Hide a year heading and its list when none of its entries are visible.
   const updateGroups = () => {
     list.querySelectorAll("ol.bibliography").forEach((ol) => {
       const lis = Array.from(ol.querySelectorAll(":scope > li"));
@@ -78,34 +135,42 @@ document.addEventListener("DOMContentLoaded", function () {
       if (head && /^H[1-6]$/.test(head.tagName)) head.classList.toggle("tag-hidden", none);
     });
     const shown = items.filter((it) => !hidden(it.li)).length;
-    count.textContent = shown === items.length ? items.length + " publications" : shown + " of " + items.length + " publications";
+    count.innerHTML =
+      shown === items.length ? "<b>" + items.length + "</b> publications" : "<b>" + shown + "</b> of " + items.length + " publications";
+  };
+
+  const refresh = () => {
+    updateGroups();
+    renderOptions();
+    renderChips();
   };
 
   const apply = () => {
-    const a = selArea.value;
-    const s = selSub.value;
-    const v = selVenue.value;
-    items.forEach((it) => {
-      const ok =
-        (!a || it.areas.includes(a)) &&
-        (!s || it.subs.includes(s)) &&
-        (!v || (v.startsWith("type:") ? it.vtype === v.slice(5) : it.venue === v.slice(6)));
-      it.li.classList.toggle("tag-hidden", !ok);
-    });
-    updateGroups();
+    items.forEach((it) => it.li.classList.toggle("tag-hidden", !matches(it)));
+    refresh();
   };
 
-  selArea.addEventListener("change", () => {
-    fillSub();
+  Object.keys(sel).forEach((k) =>
+    sel[k].addEventListener("change", () => {
+      state[k] = sel[k].value;
+      apply();
+    }),
+  );
+
+  chips.addEventListener("click", (e) => {
+    const chip = e.target.closest(".pf-chip");
+    if (!chip) return;
+    state[chip.dataset.key] = "";
     apply();
   });
-  selSub.addEventListener("change", apply);
-  selVenue.addEventListener("change", apply);
-  document.getElementById("pf-reset").addEventListener("click", () => {
-    selArea.value = "";
-    fillSub();
-    selSub.value = "";
-    selVenue.value = "";
+
+  reset.addEventListener("click", () => {
+    state.area = state.sub = state.venue = "";
+    if (search && search.value) {
+      search.value = "";
+      search.dispatchEvent(new Event("input", { bubbles: true }));
+      if (window.location.hash) history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
     apply();
   });
 
@@ -114,26 +179,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const tag = e.target.closest(".pub-tag");
     if (!tag) return;
     const val = tag.dataset.value;
-    if (tag.dataset.kind === "area") {
-      selArea.value = val;
-      fillSub();
-    } else if (tag.dataset.kind === "subarea") {
-      if (selArea.value && !items.some((it) => it.areas.includes(selArea.value) && it.subs.includes(val))) {
-        selArea.value = "";
-      }
-      fillSub();
-      selSub.value = val;
-    } else if (tag.dataset.kind === "venue") {
-      selVenue.value = "venue:" + val;
-    }
+    if (tag.dataset.kind === "area") state.area = val;
+    else if (tag.dataset.kind === "subarea") state.sub = val;
+    else if (tag.dataset.kind === "venue") state.venue = "venue:" + val;
     apply();
-    bar.scrollIntoView({ behavior: "smooth", block: "center" });
+    bar.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
-  // Keep year headings and the count in sync with the text search box.
-  const search = document.getElementById("bibsearch");
-  if (search) search.addEventListener("input", () => setTimeout(updateGroups, 50));
-  window.addEventListener("hashchange", () => setTimeout(updateGroups, 50));
+  // Recount whenever the text search changes (bibsearch.js runs its own input handler first or in the same tick).
+  if (search) search.addEventListener("input", () => setTimeout(refresh, 0));
+  window.addEventListener("hashchange", () => setTimeout(refresh, 0));
 
   apply();
 });

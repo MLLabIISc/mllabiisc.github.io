@@ -5,155 +5,135 @@ faculty:
   - name: Prof. Chiranjib Bhattacharyya
     photo: chiru2.png
     url: https://www.csa.iisc.ac.in/~chiru/
-    role: Professor, CSA, Indian Institute of Science, Bengaluru
+    role: Professor, Indian Institute of Science, Bengaluru
     email: chiru@iisc.ac.in
 
 phd:
   - name: Nabanita Paul
     photo: nabanita.jpg
     url: https://nabanita-paul.github.io/
-    role: PhD student, started Aug 2018
+    role: PhD student (since 2018)
     email: nabanitapaul@iisc.ac.in
     linkedin: https://www.linkedin.com/in/nabanita-paul-70349575
     details:
-      - Worked in Johnson Controls, Pune, Maharashtra
+      - Worked at Johnson Controls, Pune
       - B.Tech, Computer Science and Engineering, BPPIMT, Kolkata
   - name: Mariamma Antony
     photo: mariamma.jpg
-    role: PhD student, started Aug 2019
+    role: PhD student (since 2019)
     email: mariammaa@iisc.ac.in
     details:
+      - Worked at Yahoo and American Express Labs
       - M.Tech, Computer Science and Engineering, IIT Kharagpur
-      - Worked in Yahoo and American Express Labs
   - name: Prateek Kumar Sinha
     photo: prateek_kumar_sinha.jpg
-    role: PhD student, started Aug 2022
+    role: PhD student (since 2022)
     email: prateeksinha@iisc.ac.in
   - name: Sayantan Pramanik
     photo: sayantan_pramanik.jpeg
-    role: PhD student (Robert Bosch Centre for Cyber Physical Systems)
+    role: PhD student, Robert Bosch Centre for Cyber-Physical Systems
     email: sayantanp@iisc.ac.in
   - name: Adit Vishnu
     role: PhD student
     email: aditvishnu@iisc.ac.in
   - name: Sunny Manchanda
-    role: PhD student (DRDO)
+    role: PhD student, sponsored by DRDO
     email: sunnym@iisc.ac.in
 
 mtech_research:
+  - name: Pranav K Nayak
+    role: M.Tech (Research) student
+    email: pranavk@iisc.ac.in
+    details:
+      - B.Tech, Computer Science and Engineering, IIT Hyderabad
   - name: Rajiv Porana
-    role: M.Tech (Research)
+    role: M.Tech (Research) student
     email: rajivporana@iisc.ac.in
   - name: Viren Luke Radhakrishnan
-    role: M.Tech (Research), ERP from AMD
+    role: M.Tech (Research) student, ERP (AMD)
     email: virenluke@iisc.ac.in
 
 mtech:
-  - name: Anshika Modi
+  - name: Sahil Chaudhary
+    url: https://sahil-chaudhary.github.io/
     role: M.Tech student
-    email: anshikamodi@iisc.ac.in
-  - name: Korlepara Sai Phanindra
-    role: M.Tech student
-    email: phanindrak@iisc.ac.in
-  - name: Deodhar Vritika Ketan Vedanta
-    role: M.Tech student
-    email: vritikad@iisc.ac.in
-  - name: Boppena Nagaraju
-    role: M.Tech student (DRDO)
-    email: nagarajub@iisc.ac.in
-  - name: Kunal Chaudhary
-    role: M.Tech student (DRDO)
-    email: kunalc@iisc.ac.in
-  - name: Mansi Tomer
-    role: M.Tech student (AI)
-    email: mansitomer@iisc.ac.in
-  - name: Mehta Khushi Nirav
-    role: M.Tech student (AI)
-    email: khushimehta@iisc.ac.in
-  - name: Nirbhay Sharma
-    role: M.Tech student (AI)
-    email: nirbhays@iisc.ac.in
-  - name: Priya Sarkar
-    role: M.Tech student (AI)
-    email: priyasarkar@iisc.ac.in
-  - name: Sahoo Mayajeet Satyaranjan Ranjan
-    role: M.Tech student (AI)
-    email: mayajeets@iisc.ac.in
-  - name: Pranav K Nayak
-    role: M.Tech student
-    email: pranavk@iisc.ac.in
-    details:
-      - B.Tech CSE, IIT Hyderabad
 
 project_associates: []
 
+# Current position first; "First position" is the first job after the PhD. Sources are listed in REVIEW.md.
 alumni_phd:
   - name: Chaitanya Murti
-    role: Research Scientist at HP AI Research
+    role: Research Scientist, HP AI Research
+    details:
+      - PhD, Robert Bosch Centre for Cyber-Physical Systems
   - name: Aadirupa Saha
     url: https://aadirupa.github.io/
-    role: Assistant Professor, Department of Computer Science, University of Illinois Chicago (since Fall 2025)
+    role: Assistant Professor, Dept. of Computer Science, University of Illinois Chicago (since 2025)
     details:
-      - Ph.D., Dept. of CSA, IISc, advised by Aditya Gopalan and Chiranjib Bhattacharyya
+      - "First position: Postdoctoral Researcher, Microsoft Research NYC"
+      - Jointly advised by Aditya Gopalan
   - name: Achintya Kundu
     url: https://achikundu.github.io/
-    role: Principal Scientist, HP AI Lab
+    role: Principal AI/ML Scientist, HP AI Research (since 2025)
+    details:
+      - "First position: Research Scientist, IBM Research (2021)"
   - name: Shikhar Vashishth
     photo: shikhar2.jpg
     url: https://shikhar-vashishth.github.io/
-    role: Postdoctoral Researcher, Language Technologies Institute, Carnegie Mellon University
+    role: Senior Research Scientist, Google DeepMind
     details:
-      - Ph.D. jointly under Partha Pratim Talukdar, Chiranjib Bhattacharyya, and Manaal Faruqui, IISc
+      - "First position: Postdoctoral Researcher, Language Technologies Institute, Carnegie Mellon University"
+      - Jointly advised by Partha Pratim Talukdar and Manaal Faruqui
   - name: Lavanya Sita Tekumalla
     photo: lavanya.png
     url: https://lavanyats.github.io/
-    role: Founder of MachineLearningInterview.com
+    role: Machine Learning Scientist, Amazon
     details:
-      - Industry, over 9 years — Amazon, InMobi, Myntra, Kenome
+      - "First position: Amazon (2017)"
   - name: Adway Mitra
     photo: adway.jpeg
-    url: https://www.linkedin.com/in/adway-mitra-89a5ba1b/
-    role: Assistant Professor, IIT Bhubaneswar
+    url: https://www.iitkgp.ac.in/department/AI/faculty/ai-adway
+    role: Assistant Professor, Dept. of Artificial Intelligence, IIT Kharagpur (since 2019)
     details:
-      - Airbus Prize Postdoctoral Fellow, International Centre for Theoretical Sciences
+      - "First position: Airbus Prize Postdoctoral Fellow, International Centre for Theoretical Sciences (2016)"
   - name: Goutham Tholpadi
     photo: goutham.jpeg
     url: https://www.linkedin.com/in/gtholpadi/
     role: Data Science for Datacenters, Peritus.ai
     details:
-      - Data Science for Advertising, Microsoft Research
+      - "First position: Data Science for Advertising, Microsoft Research"
   - name: S Raman
     photo: raman.jpeg
     url: https://www.linkedin.com/in/raman-sankaran-9594956/
-    role: Senior Applied Research Scientist, LinkedIn
+    role: Staff Software Engineer, Google (since 2023)
     details:
-      - Ph.D. in Machine Learning 2017, Dept. of CSA, IISc
+      - "First position: Senior Applied Research Scientist, LinkedIn"
   - name: Mrinal Kanti Das
     photo: mrinal.jpg
     url: https://nmrinl.github.io/
-    role: Assistant Professor, Dept. of CSE, IIT Palakkad
+    role: Associate Professor, Dept. of Data Science, IIT Palakkad
     details:
-      - Postdoc, Dept. of Computer Science, UMass Amherst
+      - "First position: Postdoctoral Researcher, Dept. of Computer Science, UMass Amherst"
   - name: Sahely Bhadra
     photo: sahely.png
     url: https://iitpkd.ac.in/people/sahely
-    role: Assistant Professor, Dept. of CSE, IIT Palakkad
+    role: Associate Professor, Dept. of Data Science and Dept. of CSE, IIT Palakkad (since 2023)
     details:
-      - Postdoc, Network Science Institute, Northeastern University
-  - name: Saketh Nath J
+      - "First position: Postdoctoral Researcher, Max Planck Institute for Informatics and Saarland University (2012)"
+  - name: Saketha Nath Jagarlapudi
     photo: saketh.jpg
-    url: https://iith.ac.in/~saketha/about.html
-    role: Associate Professor, Dept. of CSE, IIT Hyderabad
+    url: https://people.iith.ac.in/saketha/about.html
+    role: Professor, Dept. of CSE, IIT Hyderabad (since 2026)
     details:
-      - Associate Professor, Dept. of CSE, IIT Bombay
+      - "First position: Research Assistant, IISc (2009)"
   - name: Sourangshu Bhattacharya
     photo: sourangshu.jpg
     url: https://cse.iitkgp.ac.in/~sourangshu/
-    role: Assistant Professor, Dept. of CSE, IIT Kharagpur
+    role: Associate Professor, Dept. of CSE, IIT Kharagpur
     details:
-      - Scientist, Yahoo! Labs, Bengaluru
+      - "First position: Scientist, Yahoo! Labs, Bengaluru"
 
-# Year is the joining year.
+# Year is the joining year, or "joining–graduating" where known.
 alumni_masters_research:
   - { name: Ravi Raja, year: 2019, url: "https://sites.google.com/view/raviraja/" }
   - { name: Abhinav Anand, year: 2016 }
@@ -166,8 +146,18 @@ alumni_masters_research:
   - { name: Vinay Jethava, year: 2006 }
 
 alumni_masters:
-  - { name: Dhruva Kashyap, year: 2022 }
-  - { name: Tanay Narshana, year: 2020 }
+  - { name: Anshika Modi, year: "2024–2026" }
+  - { name: Korlepara Sai Phanindra, year: "2024–2026" }
+  - { name: Deodhar Vritika Ketan Vedanta, year: "2024–2026" }
+  - { name: Boppena Nagaraju, year: "2024–2026" }
+  - { name: Kunal Chaudhary, year: "2024–2026" }
+  - { name: Mansi Tomer, year: "2024–2026" }
+  - { name: Mehta Khushi Nirav, year: "2024–2026" }
+  - { name: Nirbhay Sharma, year: "2024–2026" }
+  - { name: Priya Sarkar, year: "2024–2026" }
+  - { name: Sahoo Mayajeet Satyaranjan Ranjan, year: "2024–2026" }
+  - { name: Dhruva Kashyap, year: "2022–2024" }
+  - { name: Tanay Narshana, year: "2020–2022" }
   - { name: Pooja Ravi Kulkarni, year: 2016, url: "https://www.linkedin.com/in/pooja-kulkarni-32541aa6/" }
   - { name: Prachi Sharma, year: 2016 }
   - { name: Vysakh P R, year: 2016, url: "https://www.linkedin.com/in/vysakhpr/" }

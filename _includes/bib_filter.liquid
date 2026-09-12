@@ -1,70 +1,255 @@
-<!-- Publication tag filter (Area / Sub-area / Venue). Tags come from the areas, subareas, abbr and venue_type fields in papers.bib; logic in assets/js/bibfilter.js -->
+<!-- Publication filter panel (Area / Line of work / Venue + text search). Tags come from the areas, subareas, abbr and venue_type fields in papers.bib; logic in assets/js/bibfilter.js -->
 <style>
   .tag-hidden {
     display: none !important;
-  }
-  .pub-tags {
-    display: none;
   }
   #pub-list .pub-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem;
-    margin-top: 0.3rem;
+    margin-top: 0.35rem;
   }
   .pub-tag {
     font-size: 0.7rem;
-    line-height: 1.4;
-    padding: 0 0.5rem;
+    line-height: 1.5;
+    padding: 0 0.55rem;
     border: 1px solid var(--global-divider-color);
-    border-radius: 1rem;
+    border-radius: 999px;
     background: transparent;
     color: var(--global-text-color-light);
     cursor: pointer;
+    transition:
+      background-color 0.15s,
+      color 0.15s,
+      border-color 0.15s;
   }
   .pub-tag-area {
     border-color: var(--global-theme-color);
     color: var(--global-theme-color);
   }
   .pub-tag:hover,
-  .pub-tag:focus {
+  .pub-tag:focus-visible {
     background: var(--global-theme-color);
     border-color: var(--global-theme-color);
     color: var(--global-bg-color);
     outline: none;
   }
-  #pub-filter {
+
+  /* Panel */
+  .pf-panel {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.75rem;
+    padding: 1rem 1.1rem 0.85rem;
+    margin-bottom: 1.5rem;
+    background: var(--global-card-bg-color, var(--global-bg-color));
+  }
+  .pf-search {
+    position: relative;
+    margin-bottom: 0.85rem;
+  }
+  .pf-search::before {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-top: -0.5rem;
+    border: 2px solid var(--global-text-color-light);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .pf-search::after {
+    content: "";
+    position: absolute;
+    left: 1.42rem;
+    top: 50%;
+    width: 0.4rem;
+    height: 2px;
+    margin-top: 0.3rem;
+    background: var(--global-text-color-light);
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
+  .pf-panel #bibsearch {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 0.75rem 0.5rem 2.2rem;
+    font-size: 0.95rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.5rem;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    transition:
+      border-color 0.15s,
+      box-shadow 0.15s;
+  }
+  .pf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 0.75rem;
+  }
+  .pf-field label {
+    display: block;
+    margin: 0 0 0.3rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+  .pf-select {
+    position: relative;
+  }
+  .pf-select::after {
+    content: "";
+    position: absolute;
+    right: 0.85rem;
+    top: 50%;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-top: -0.35rem;
+    border-right: 2px solid var(--global-text-color-light);
+    border-bottom: 2px solid var(--global-text-color-light);
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
+  .pf-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 0.45rem 2.1rem 0.45rem 0.7rem;
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.5rem;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    cursor: pointer;
+    transition:
+      border-color 0.15s,
+      box-shadow 0.15s;
+  }
+  .pf-select select:hover,
+  .pf-panel #bibsearch:hover {
+    border-color: var(--global-text-color-light);
+  }
+  .pf-select select:focus,
+  .pf-panel #bibsearch:focus {
+    outline: none;
+    border-color: var(--global-theme-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--global-theme-color) 22%, transparent);
+  }
+  .pf-field.is-active select {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+    font-weight: 600;
+  }
+  .pf-footer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem 1rem;
-    margin-bottom: 0.75rem;
+    gap: 0.5rem 0.75rem;
+    margin-top: 0.85rem;
+    min-height: 1.9rem;
   }
-  #pub-filter label {
-    margin: 0;
-    font-size: 0.9rem;
+  .pf-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    flex: 1 1 auto;
   }
-  #pub-filter select {
-    max-width: 16rem;
-    margin-left: 0.25rem;
-    padding: 0.15rem 0.35rem;
-    border: 1px solid var(--global-divider-color);
-    border-radius: 0.25rem;
-    background: var(--global-bg-color);
-    color: var(--global-text-color);
+  .pf-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.15rem 0.4rem 0.15rem 0.65rem;
+    font-size: 0.78rem;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--global-theme-color) 10%, transparent);
+    color: var(--global-theme-color);
+    cursor: pointer;
+  }
+  .pf-chip b {
+    font-weight: 600;
+  }
+  .pf-chip .pf-x {
+    display: inline-grid;
+    place-items: center;
+    width: 1.05rem;
+    height: 1.05rem;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    line-height: 1;
+  }
+  .pf-chip:hover .pf-x,
+  .pf-chip:focus-visible .pf-x {
+    background: var(--global-theme-color);
+    color: var(--global-bg-color);
+  }
+  .pf-chip:focus-visible {
+    outline: none;
   }
   #pf-count {
-    color: var(--global-text-color-light);
     font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    white-space: nowrap;
+    margin-left: auto;
+  }
+  #pf-count b {
+    color: var(--global-text-color);
+    font-weight: 600;
+  }
+  .pf-reset {
+    padding: 0.25rem 0.8rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 0.5rem;
+    background: transparent;
+    color: var(--global-theme-color);
+    cursor: pointer;
+    transition:
+      background-color 0.15s,
+      color 0.15s;
+  }
+  .pf-reset:hover:not(:disabled),
+  .pf-reset:focus-visible:not(:disabled) {
+    background: var(--global-theme-color);
+    color: var(--global-bg-color);
+    outline: none;
+  }
+  .pf-reset:disabled {
+    border-color: var(--global-divider-color);
+    color: var(--global-text-color-light);
+    cursor: default;
+    opacity: 0.6;
   }
 </style>
 
-<div id="pub-filter" role="search" aria-label="Filter publications by tag">
-  <label>Area (arXiv) <select id="pf-area"></select></label>
-  <label>Line of work <select id="pf-sub"></select></label>
-  <label>Venue <select id="pf-venue"></select></label>
-  <button id="pf-reset" type="button" class="btn btn-sm z-depth-0">Reset</button>
-  <span id="pf-count" aria-live="polite"></span>
+<div id="pub-filter" class="pf-panel" role="search" aria-label="Filter publications">
+  <div class="pf-search"></div>
+  <div class="pf-grid">
+    <div class="pf-field">
+      <label for="pf-area">Area</label>
+      <div class="pf-select"><select id="pf-area"></select></div>
+    </div>
+    <div class="pf-field">
+      <label for="pf-sub">Line of work</label>
+      <div class="pf-select"><select id="pf-sub"></select></div>
+    </div>
+    <div class="pf-field">
+      <label for="pf-venue">Venue</label>
+      <div class="pf-select"><select id="pf-venue"></select></div>
+    </div>
+  </div>
+  <div class="pf-footer">
+    <div id="pf-chips" class="pf-chips" aria-label="Active filters"></div>
+    <span id="pf-count" aria-live="polite"></span>
+    <button id="pf-reset" type="button" class="pf-reset">Reset</button>
+  </div>
 </div>
 
 <script>
