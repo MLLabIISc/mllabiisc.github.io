@@ -4,7 +4,7 @@ permalink: /people/
 title: People
 description: Members and alumni of the Machine Learning Lab.
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
 <!-- Member data lives in _data/people.yml -->

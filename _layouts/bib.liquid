@@ -195,13 +195,13 @@
         data-vtype="{{ entry.venue_type | escape }}"
       >
         {% assign tag_areas = entry.areas | split: ';' %}
-        {% for tag in tag_areas %}
-          {% assign tag = tag | strip %}
+        {% for raw_tag in tag_areas %}
+          {% assign tag = raw_tag | strip %}
           <button type="button" class="pub-tag pub-tag-area" data-kind="area" data-value="{{ tag | escape }}" title="{{ site.data.arxiv[tag] | default: tag | escape }}">{{ tag }}</button>
         {% endfor %}
         {% assign tag_subareas = entry.subareas | split: ';' %}
-        {% for tag in tag_subareas %}
-          {% assign tag = tag | strip %}
+        {% for raw_tag in tag_subareas %}
+          {% assign tag = raw_tag | strip %}
           <button type="button" class="pub-tag" data-kind="subarea" data-value="{{ tag | escape }}">{{ tag }}</button>
         {% endfor %}
         {% if entry.abbr %}

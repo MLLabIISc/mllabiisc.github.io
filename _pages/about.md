@@ -11,10 +11,17 @@ profile:
   more_info:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
+
+# Partner logos shown below Recent Publications (files in assets/img/logos/)
+partners:
+  - name: HP AI Research
+    logo: hp.svg
+  - name: AMD
+    logo: amd.svg
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items (switched off on the home page)
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
@@ -31,15 +38,3 @@ To this end, we develop numerous machine learning algorithms and tools for compl
 We are located in Bengaluru, which is the Silicon Valley of India. We also collaborate with industry as well as other universities on cutting-edge research.
 
 We are unable to respond to part-time, short-term (less than one year), and/or remote student mentorship requests. For open positions, see the [Opportunities]({{ '/opportunities/' | relative_url }}) page.
-
-#### Our Collaborators
-
-<div class="row align-items-center justify-content-center text-center mt-3 mb-3">
-  {% assign collaborators = "hp.svg:HP AI Research,amd.svg:AMD" | split: "," %}
-  {% for c in collaborators %}
-    {% assign parts = c | split: ":" %}
-    <div class="col-4 col-md mb-3">
-      <img src="{{ parts[0] | prepend: '/assets/img/logos/' | relative_url }}" alt="{{ parts[1] }}" title="{{ parts[1] }}" class="img-fluid" style="max-height: 60px">
-    </div>
-  {% endfor %}
-</div>

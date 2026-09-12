@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
   list.addEventListener("click", (e) => {
     const tag = e.target.closest(".pub-tag");
     if (!tag) return;
-    const val = tag.dataset.value;
+    const val = (tag.dataset.value || "").trim();
     if (tag.dataset.kind === "area") state.area = val;
     else if (tag.dataset.kind === "subarea") state.sub = val;
     else if (tag.dataset.kind === "venue") state.venue = "venue:" + val;

@@ -45,7 +45,7 @@
   }
   .pf-search {
     position: relative;
-    margin-bottom: 0.85rem;
+    margin-top: 0.85rem;
   }
   .pf-search::before {
     content: "";
@@ -230,7 +230,6 @@
 </style>
 
 <div id="pub-filter" class="pf-panel" role="search" aria-label="Filter publications">
-  <div class="pf-search"></div>
   <div class="pf-grid">
     <div class="pf-field">
       <label for="pf-area">Area</label>
@@ -245,6 +244,7 @@
       <div class="pf-select"><select id="pf-venue"></select></div>
     </div>
   </div>
+  <div class="pf-search"></div>
   <div class="pf-footer">
     <div id="pf-chips" class="pf-chips" aria-label="Active filters"></div>
     <span id="pf-count" aria-live="polite"></span>
