@@ -19,10 +19,10 @@ nav_order: 4
   <p>
     Jump to:
     <a href="#phd">PhD Students</a>, <a href="#mtech_research">M.Tech (Research) Students</a>, <a href="#mtech">M.Tech Students</a>,
-    {% if site.data.people.project_associates.size > 0 %}<a href="#project_associates">Project Associates</a>, {% endif %}<a href="#alumni">Alumni</a>.
+    {% if site.data.people.btech.size > 0 %}<a href="#btech">B.Tech Students</a>, {% endif %}{% if site.data.people.project_associates.size > 0 %}<a href="#project_associates">Project Associates</a>, {% endif %}<a href="#alumni">Alumni</a>.
   </p>
 
-{% assign groups = "faculty:Faculty|phd:PhD Students|mtech_research:M.Tech (Research) Students|mtech:M.Tech Students|project_associates:Project Associates|alumni_phd:Alumni (PhD)" | split: "|" %}
+{% assign groups = "faculty:Faculty|phd:PhD Students|mtech_research:M.Tech (Research) Students|mtech:M.Tech Students|btech:B.Tech Students|project_associates:Project Associates|alumni_phd:Alumni (PhD)" | split: "|" %}
 {% for group in groups %}
 {% assign g = group | split: ":" %}
 {% assign key = g[0] %}
@@ -31,13 +31,6 @@ nav_order: 4
 
 {% if members.size > 0 %}
   <h2 id="{{ g[0] }}" class="mt-4">{{ g[1] }}</h2>
-  {% if key == "mtech" %}
-  <ul class="list-unstyled row row-cols-1 row-cols-sm-2">
-    {% for p in members %}
-      <li class="col mb-1">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}{% assign note = p.role | remove: "M.Tech student" | strip %}{% if note != "" %} {{ note }}{% endif %}{% if p.details %} <span class="text-muted">({{ p.details | join: "; " }})</span>{% endif %}{% if p.email %} · <a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}</li>
-    {% endfor %}
-  </ul>
-  {% else %}
   <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
     {% for p in members %}
       <div class="col mb-4 people-card">
@@ -57,7 +50,6 @@ nav_order: 4
       </div>
     {% endfor %}
   </div>
-  {% endif %}
 {% endif %}
 {% endfor %}
 
