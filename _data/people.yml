@@ -39,6 +39,16 @@ phd:
   - name: Sunny Manchanda
     role: PhD student, sponsored by DRDO
     email: sunnym@iisc.ac.in
+  - name: Polaki Vedanjali
+    role: PhD (Engineering), Computer Science and Automation (since 2026)
+    email: vedanjalipo1@iisc.ac.in
+  - name: Ayan Das
+    role: PhD (Science), Center for Ecological Sciences
+    email: ayand@iisc.ac.in
+  - name: Suresh Meena
+    role: PhD (Engineering), Computer Science and Automation (since 2026)
+    email: sureshmeena@iisc.ac.in
+
 
 mtech_research:
   - name: Pranav K Nayak
@@ -56,7 +66,15 @@ mtech_research:
 mtech:
   - name: Sahil Chaudhary
     url: https://sahil-chaudhary.github.io/
-    role: M.Tech student
+    role: M.Tech, Mathematics and Computing
+
+btech:
+  - name: Om Prakash Choudhary
+    role: B.Tech, Mathematics and Computing
+    email: omprakashc@iisc.ac.in
+  - name: Pasupuleti Dhruv Shivkant
+    role: B.Tech, Mathematics and Computing
+    email: dhruvsp@iisc.ac.in
 
 project_associates: []
 
